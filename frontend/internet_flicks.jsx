@@ -5,7 +5,22 @@ import Root from './components/root'
 import {login,signup} from './actions/session_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const store = configureStore();
+    let store;
+    if (window.current_user) {
+        const preloadedState = {
+            entities: {
+                users: {[window.current_user.id]: window.current_user}
+            },
+            session: {
+                id: window.current_user.id
+            }
+        }
+        store = configureStore(preloadedState);
+        delete window.current_user;
+    } else {
+        store = configureStore();
+    }
+
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.login = login
