@@ -5,7 +5,7 @@ const Greetings = (props) => {
     const logged_in = () => (
         <div>
             <h1>{`Welcome ${props.user.username}`}</h1>
-            <button onClick={props.logout()}>Logout</button>
+            <button onClick={props.logout}>Logout</button>
         </div>
     )
 
