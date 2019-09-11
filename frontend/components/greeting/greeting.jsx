@@ -10,9 +10,12 @@ const Greetings = (props) => {
     )
 
     const links = () => (
-        <div>
-            <Link to='/signup'>Sign Up!</Link>
-            <Link to='login'>Login!</Link>
+        <div className='greeting-container'>
+            <div className='splash-signup'>
+                <Link to='/signup' className='splash-signup-link'>Sign Up!</Link>
+           
+                <Link to='login' className='splash-login-link'>Sign in</Link>
+            </div>
         </div>
     )
 
