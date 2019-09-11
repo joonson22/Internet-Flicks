@@ -1,3 +1,102 @@
 // Place all the styles related to the api/session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ .title {
+     color: #E50914;
+     font-size: 16px;
+ }
+
+ .greeting-container {
+     .splash-signup-link{
+        background-color: red;
+        color: white;
+        padding: 0.7em;
+        text-decoration: none;
+        border-radius: 15px;
+        
+        position: relative;
+        top: 350px;
+        left: 860px;
+        
+     }
+     .splash-login-link{
+        display: flex;
+        float:right;
+        position: relative;
+        bottom: 50px;
+        right: 35px;
+
+        background-color: red;
+        color: white;
+        padding: 0.7em;
+        text-decoration: none;
+        border-radius: 15px;
+     }
+ }
+
+ body {
+     background-image: linear-gradient(
+          rgba(26, 25, 25, 0.7), 
+          rgba(26, 25, 25, 0.7)
+        ), url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg")
+ 
+    }
+
+ .form-container {
+     background-color: rgba(0, 0, 0, 0.75);
+     width: 450px;
+     height: 650px;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     font-size: 32px;
+     
+     margin: auto;
+     padding: 65px;
+
+     input {
+        width: 314px;
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        position: relative;
+        bottom: 75px;
+        background: #333;
+        border-color: #333;
+     }
+     input:focus {
+        color: white;
+    }
+     .form-header {
+         color: white;
+     }
+    
+     .form-btn {
+         background-color: #E50914;
+         color: white;
+         border-color: #E50914;
+         width: 320px;
+         height: 56px;
+         padding: 1px;
+         margin-top: 15px;
+         
+     }
+     
+     .form-link {
+         padding-top: 50px;
+         color: white;
+         font-size: 16px;
+         text-decoration: none;
+     }
+
+     ul{
+         color: white;
+     }
+   
+ }
+
+
+
+
+ 

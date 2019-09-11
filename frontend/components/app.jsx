@@ -7,7 +7,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util'
 const App = () => (
     <div>
         <header>
-            <h1 className='title'>Internet Flicks</h1>
+            <a href="#"><img src="https://fontmeme.com/permalink/190911/42359bbf84e020be8f811016380611ac.png" alt="netflix-font" border="0"></img></a>
             <GreetingContainer />
         </header>
         <AuthRoute path='/login' component={LoginFormContainer} />

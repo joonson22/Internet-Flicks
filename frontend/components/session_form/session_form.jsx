@@ -35,37 +35,45 @@ class SessionForm extends React.Component {
     render(){
         return(
             this.props.formType === 'login' ? (
-                <div className='login-form'>
-                    <header>Log In</header>
+                
+                <div className='form-container'>
+                  
+                    <header className='form-header'>Log In</header>
                     <br/>
                         {this.renderErrors()}
                         <form action=""onSubmit={this.handleSubmit}>
-                            <label htmlFor="">Username
-                                <input type="text" value={this.state.username} onChange={this.update("username")}/>
+                            <label htmlFor="">
+                                <input type="text" value={this.state.username} placeholder="Username" onChange={this.update("username")}/>
                             </label>
-                            <label htmlFor="">Password
-                                <input type="password" value={this.state.password} onChange={this.update('password')}/>
+                            <br/>
+                            <label htmlFor="">
+                                <input type="password" value={this.state.password} placeholder='Password' onChange={this.update('password')}/>
                             </label>
-                            <input type="submit" value='login'/>
+                            <br/>
+                            <input type="submit" value='Sign In' className='form-btn'/>
                         </form>
-                    <Link to='/signup'>Sign Up</Link>
+                        <br/>
+                    <Link to='/signup' className='form-link'>Sign up now.</Link>
                 </div>
             ) : (
-                <div>
-                    <header>Sign Up
+                <div className='form-container'>
+                    <div className='signup-background'></div>
+                    <header className='form-header'>Sign Up</header>
+                    <br/>
+                    {this.renderErrors()}
+                    <form action="" onSubmit={this.handleSubmit}>
+                        <label htmlFor="">
+                            <input type="text" value={this.state.username} placeholder="Username" onChange={this.update("username")} />
+                        </label>
                         <br/>
-                        {this.renderErrors()}
-                        <form action="" onSubmit={this.handleSubmit}>
-                            <label htmlFor="">Username
-                                <input type="text" value={this.state.username} onChange={this.update("username")} />
-                            </label>
-                            <label htmlFor="">Password
-                                <input type="password" value={this.state.password} onChange={this.update('password')} />
-                            </label>
-                            <input type="submit" value='Signup' />
-                        </form>
-                    </header>
-                    <Link to='/login'>Log In</Link>
+                        <label htmlFor="">
+                            <input type="password" value={this.state.password} placeholder='Password' onChange={this.update('password')} />
+                        </label>
+                        <br/>
+                        <input type="submit" value='Signup' className='form-btn' />
+                    </form>
+                    <br/>
+                    <Link to='/login' className='form-link'>Log in now.</Link>
                 </div>
             )
         )
