@@ -35,17 +35,18 @@ class SessionForm extends React.Component {
         for(let i = 0; i < username.length; i++) {
             setTimeout(() => {
                 this.setState({username: this.state.username += username.shift()})
-            }, 1000)
+            }, 700)
         }
 
         for (let j = 0; j < password.length; j++) {
             setTimeout(() => {
                 this.setState({password: this.state.password += password.shift()})
-            }, 1500)
+            }, 1200)
         }
         
 
         // this.setState({username: 'Cutie', password: '123456'})
+       
         
     }
 
