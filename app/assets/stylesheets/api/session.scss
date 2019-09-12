@@ -2,98 +2,190 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- .title {
-     color: #E50914;
-     font-size: 16px;
- }
-
- .greeting-container {
-     .splash-signup-link{
-        background-color: red;
-        color: white;
-        padding: 0.7em;
-        text-decoration: none;
-        border-radius: 15px;
-        
-        position: relative;
-        top: 350px;
-        left: 860px;
-        
-     }
+//NavBar--------------------------------------------------------------
+ .nav-bar-container {
+     display: flex;
+     justify-content: space-between;
      .splash-login-link{
-        display: flex;
-        float:right;
-        position: relative;
-        bottom: 50px;
-        right: 35px;
-
-        background-color: red;
-        color: white;
-        padding: 0.7em;
-        text-decoration: none;
-        border-radius: 15px;
+         background-color: red;
+         color: white;
+         padding: 0.7em;
+         text-decoration: none;
+         border-radius: 15px;
+        //  height: 20px;
+         height: 2.5vh;
+        //  width: 50px;
+         width: 3.4vw;
+        //  margin-right: 50px;
+         margin-right: 3.5%
      }
  }
 
- body {
-     background-image: linear-gradient(
+//Splash page----------------------------------------------------------
+ .greeting-container {
+    .background-splash{
+        background-image: linear-gradient(
           rgba(26, 25, 25, 0.7), 
           rgba(26, 25, 25, 0.7)
-        ), url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg")
- 
+        ), url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
+    .splash-text {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // width: 100vw;
+        height: 80vh;
+        
+        h1 {
+            align-self: center;
+        }
 
- .form-container {
+        p{
+            align-self: center;
+            // margin: 40px;
+            margin: 2.8%;
+            font-size: 24px;
+        }
+        .signup-link {
+            font-size: 24px;
+            background-color: red;
+            color: white;
+            padding: 0.7em;
+            text-decoration: none;
+            border-radius: 15px;
+            align-self: center;
+            // margin-bottom: 250px;
+            margin-bottom: 19%;
+        }
+
+    }
+    
+     
+
+
+ }
+//Session form-------------------------------------------------------------
+ .background-login {
+  
+    background-image: linear-gradient(
+          rgba(26, 25, 25, 0.7), 
+          rgba(26, 25, 25, 0.7)
+        ), url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+    min-width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.background-signup {
+    background-image: linear-gradient(
+          rgba(26, 25, 25, 0.7), 
+          rgba(26, 25, 25, 0.7)
+        ), url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+    min-width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+}
+ .form {
      background-color: rgba(0, 0, 0, 0.75);
-     width: 450px;
-     height: 650px;
-     box-sizing: border-box;
+    //  width: 450px;
+    width: 30vw;
+    height: 65vh;
+    //  height: 650px;
+     align-self: center;
+
      display: flex;
      flex-direction: column;
-     font-size: 32px;
-     
-     margin: auto;
-     padding: 65px;
+     justify-content: center;
+     align-items: center;
+    //  margin-bottom: 200px;
+    margin-bottom: 7%;
+
 
      input {
-        width: 314px;
-        height: 50px;
-        margin-bottom: 20px;
+        // width: 314px;
+        width: 21.6vw;
+        // height: 50px;
+        height: 6vh;
+        // margin-bottom: 20px;
+        margin-bottom: 5%;
         font-size: 16px;
-        position: relative;
-        bottom: 75px;
+        align-self: center;
         background: #333;
         border-color: #333;
+        padding-left: 10px;
      }
      input:focus {
         color: white;
     }
      .form-header {
          color: white;
+         font-size: 32px;
+        //  margin-right: 225px;
+         margin-right: 50%;
      }
     
      .form-btn {
          background-color: #E50914;
          color: white;
          border-color: #E50914;
-         width: 320px;
-         height: 56px;
-         padding: 1px;
-         margin-top: 15px;
+        //  width: 322px;
+         width: 22.5vw;
+        //  height: 56px;  
+         height: 7vh;
+        //  margin-top: 15px;
+         margin-top: 6%;
+        //  margin-left: 2px;
+        margin-left: 1%;
          
      }
      
      .form-link {
          padding-top: 50px;
          color: white;
-         font-size: 16px;
+         font-size: 20px;
          text-decoration: none;
+        //  margin-right: 225px;
+        margin-right: 50%;
+        //  margin-left: 4px;
      }
 
      ul{
          color: white;
+         margin-right: 100px;
      }
    
+     .demo-btn {
+        // width: 320px;
+        width: 22.5vw;
+        // height: 50px;
+        height: 6vh;
+        font-size: 16px;
+     }
  }
 
 
