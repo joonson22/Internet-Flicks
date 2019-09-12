@@ -14,8 +14,8 @@ const Greetings = (props) => {
             <div className='background-splash'></div>
             <div className='splash-text'>
                 <h1>The place to be for internet flicks of the century</h1>
-                <p>Sign up for free below, you only have to give me a job after</p>
-                <Link to='/signup' className='signup-link'>Sign up and trade your soul for some movies</Link>
+                <p>Take a journey back in time to cult classics</p>
+                <Link to='/signup' className='signup-link'>Sign up for free</Link>
             </div>
         </div>
     )
