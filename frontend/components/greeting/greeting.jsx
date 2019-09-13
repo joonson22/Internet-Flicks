@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Greetings = (props) => {
     const logged_in = () => (
-        <div>
+        <div className='greeting-index-container'>
             <h1>{`Welcome ${props.user.username}`}</h1>
             <button onClick={props.logout}>Logout</button>
         </div>
