@@ -10,7 +10,6 @@ class SessionForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.demoLogin = this.demoLogin.bind(this)
-        
     }
 
     componentDidMount(){
@@ -23,49 +22,48 @@ class SessionForm extends React.Component {
         })
     }
     handleSubmit(e) {
-        e.preventDefault;
+        // e.preventDefault;
         let user = Object.assign({}, this.state)
         this.props.processForm(user)
     }
 
-    demoLogin(){
-        let username = 'Cutie'.split('')
-        let password = '123456'.split('')
-        
-        for(let i = 0; i < username.length; i++) {
-            setTimeout(() => {
-                this.setState({username: this.state.username += username.shift()})
-            }, 700)
-        }
-
-        for (let j = 0; j < password.length; j++) {
-            setTimeout(() => {
-                this.setState({password: this.state.password += password.shift()})
-            }, 1200)
-        }
-        
-
-        // this.setState({username: 'Cutie', password: '123456'})
-       
-        
+    demoLogin(e){
+        // e.preventDefault;
+        this.setState({
+            username: '',
+            password: ''
+        })
+        this.setUsername()
     }
 
-    // recursiveCall(username, password) {
-    //     if (username.length === 0) return ''
-    //     if (password.length === 0) return ''
+    setUsername(demoname) {
+        demoname = demoname || 'Cutie'.split('')
+        setTimeout(this.setState({
+            username: this.state.username += demoname.shift()
+        }), 2000)
 
-    //     setTimeout(() => {
-    //         this.setState({ username: this.state.username += username.shift() })
-    //     }, 500)
-    //     setTimeout(() => {
-    //         this.setState({ password: this.state.password += password.shift() })
-    //     }, 500)
-    // }
+        return demoname.length === 0 ? this.setPassword() : this.setUsername(demoname)
+    }
+
+    setPassword(demopassword) {
+        let user = {
+            username: 'Cutie',
+            password: '123456'
+        }
+        demopassword = demopassword || '123456'.split('')
+
+        setTimeout(this.setState({
+            password: this.state.password += demopassword.shift()
+        }), 2000)
+
+        return demopassword.length === 0 ? this.handleSubmit() : this.setPassword(demopassword)
+    }
+
     renderErrors(){
         return(
             <ul>
                 {this.props.errors.map((error, i) => {
-                    return <li>{error}</li>
+                    return <li key={i}>{error}</li>
                 })}
 
             </ul>
@@ -73,6 +71,17 @@ class SessionForm extends React.Component {
         )
     }
     render(){
+        let userError;
+        let passwordError;
+
+        this.props.errors.map(error => {
+            if (error.includes("Username")) {
+                userError = error;
+            } else {
+                passwordError = error;
+            }
+        })
+
         return(
             this.props.formType === 'login' ? (
                 <div className='form-container'>
@@ -80,7 +89,9 @@ class SessionForm extends React.Component {
                     <div className='form'>
                         <header className='form-header-login'>Sign In</header>
                         <br/>
+                        <div className='login-errors'>
                             {this.renderErrors()}
+                        </div>
                             <form action=""onSubmit={this.handleSubmit}>
                                 <label htmlFor="">
                                     <input type="text" value={this.state.username} placeholder="Username" onChange={this.update("username")}/>
@@ -105,15 +116,20 @@ class SessionForm extends React.Component {
                     <div className='background-signup'></div>
                         <header className='form-header'>Sign Up</header>
                         <br/>
-                         <li className='signup-error'>{this.renderErrors()} </li>
                         <form action="" onSubmit={this.handleSubmit}>
                             <label htmlFor="">
                                 <input type="text" value={this.state.username} placeholder="Username" onChange={this.update("username")} />
                             </label>
+                                <div className='login-errors'>
+                                    <li>{userError}</li> 
+                                </div>
                             <br/>
                             <label htmlFor="">
                                 <input type="password" value={this.state.password} placeholder='Password' onChange={this.update('password')} />
                             </label>
+                            <div>
+                                <li>{passwordError}</li>
+                            </div>
                             <br/>
                             <input type="submit" value='Signup' className='form-btn' />
                         </form>
