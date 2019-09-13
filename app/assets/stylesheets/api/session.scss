@@ -2,15 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+    background-color: black;
+    z-index: -1;
+}
 //NavBar--------------------------------------------------------------
  .nav-bar-container {
      display: flex;
      justify-content: space-between;
+    //  background-color: black;
      .splash-login-link{
          background-color: #E50914;
          color: white;
-         padding: 0.7em;
-         padding-right: 5px;
+         padding: 0.9em;
+         padding-right: 7px;
          text-decoration: none;
          border-radius: 15px;
         //  height: 20px;
@@ -19,10 +25,17 @@
          width: 4vw;
         //  margin-right: 50px;
          margin-right: 3.5%;
+         box-shadow: 0 6px rgb(146, 1, 8);
          
      }
      .splash-login-link:hover {
          background-color: rgb(255, 0, 0);
+     }
+
+     .splash-login-link:active {
+         background-color: rgb(255, 0, 0);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
      }
  }
 
@@ -66,17 +79,24 @@
             font-size: 24px;
             background-color: #E50914;
             color: white;
-            padding: 0.7em;
+            padding: 0.9em;
             text-decoration: none;
             border-radius: 15px;
             align-self: center;
             // margin-bottom: 250px;
             margin-bottom: 19%;
+            box-shadow: 0 6px rgb(146, 1, 8);
         }
 
         .signup-link:hover {
             background-color: rgb(255, 0, 0);
         }
+
+        .signup-link:active {
+         background-color: rgb(255, 0, 0);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+     }
 
     }
     
@@ -88,8 +108,8 @@
  .background-login {
   
     background-image: linear-gradient(
-          rgba(26, 25, 25, 0.3), 
-          rgba(26, 25, 25, 0.3)
+          rgba(26, 25, 25, 0.7), 
+          rgba(26, 25, 25, 0.7)
         ), url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2439391.jpg");
     min-width: 100vw;
     min-height: 100vh;
@@ -102,8 +122,8 @@
 }
 .background-signup {
     background-image: linear-gradient(
-          rgba(26, 25, 25, 0.3), 
-          rgba(26, 25, 25, 0.3)
+          rgba(26, 25, 25, 0.5), 
+          rgba(26, 25, 25, 0.5)
         ), url("http://www.sclance.com/backgrounds/film-background/film-background_945416.jpg");
     min-width: 100vw;
     min-height: 100vh;
@@ -127,7 +147,7 @@
     height: 65vh;
     //  height: 650px;
      align-self: center;
-
+    padding: 0.8em;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -178,18 +198,25 @@
          border-radius: 5px;
          cursor: pointer;
         //  width: 322px;
-         width: 22.5vw;
+        width: 22.5vw;
         //  height: 56px;  
-         height: 7vh;
+        height: 7vh;
         //  margin-top: 15px;
-         margin-top: 5%;
+        margin-top: 5%;
         //  margin-left: 2px;
         margin-left: 1%;
+        box-shadow: 0 6px rgb(146, 1, 8);
          
      }
 
      .form-btn:hover {
         background-color: rgb(255, 0, 0);
+     }
+
+     .form-btn:active {
+         background-color: rgb(255, 0, 0);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
      }
      
      .form-link {
@@ -206,13 +233,22 @@
      ul{
          color: white;
         //  margin-right: 100px;
-         margin-right: 24%;
+        //  margin-right: 24%;
+        margin: 0;
+        padding: 0;
+        // margin-right: 30%;
+        width: 100%;
      }
 
      li {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 5%;
+        // margin-right: 5%;
+        font-size: 90%;
+        color: #E87C03;
+        
      }
 
      .signup-error {
@@ -229,12 +265,19 @@
         // font-size: 16px;
         font-size: 100%;
         border-radius: 5px;
+        box-shadow: 0 6px #999;
        
      }
     
      .demo-btn:hover {
          background-color: rgb(230, 230, 230);
          cursor: pointer;
+     }
+
+      .demo-btn:active {
+        background-color: rgb(230, 230, 230);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
      }
  }
 
