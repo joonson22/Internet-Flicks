@@ -22,13 +22,13 @@ class SessionForm extends React.Component {
         })
     }
     handleSubmit(e) {
-        // e.preventDefault;
+        e.preventDefault();
         let user = Object.assign({}, this.state)
         this.props.processForm(user)
     }
 
     demoLogin(e){
-        // e.preventDefault;
+        e.preventDefault();
         this.setState({
             username: '',
             password: ''
@@ -38,25 +38,28 @@ class SessionForm extends React.Component {
 
     setUsername(demoname) {
         demoname = demoname || 'Cutie'.split('')
-        setTimeout(this.setState({
-            username: this.state.username += demoname.shift()
-        }), 2000)
+        setTimeout(() => {
+            this.setState({
+                username: this.state.username += demoname.shift()
+            })
+            return demoname.length === 0 ? this.setPassword() : this.setUsername(demoname)
+        }, 50)
+       
 
-        return demoname.length === 0 ? this.setPassword() : this.setUsername(demoname)
     }
 
     setPassword(demopassword) {
-        let user = {
-            username: 'Cutie',
-            password: '123456'
-        }
+    
         demopassword = demopassword || '123456'.split('')
 
-        setTimeout(this.setState({
-            password: this.state.password += demopassword.shift()
-        }), 2000)
+        setTimeout(() => {
+            this.setState({
+                password: this.state.password += demopassword.shift()
+            })
+            return demopassword.length === 0 ? this.props.processForm(this.state)  : this.setPassword(demopassword)
+        }, 50)
 
-        return demopassword.length === 0 ? this.handleSubmit() : this.setPassword(demopassword)
+       
     }
 
     renderErrors(){
