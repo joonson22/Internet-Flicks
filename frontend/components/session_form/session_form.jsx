@@ -24,7 +24,10 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let user = Object.assign({}, this.state)
-        this.props.processForm(user)
+        this.props.processForm(user).then(() => {
+                this.props.history.push('/movies')
+            }
+        )
     }
 
     demoLogin(e){
@@ -56,7 +59,9 @@ class SessionForm extends React.Component {
             this.setState({
                 password: this.state.password += demopassword.shift()
             })
-            return demopassword.length === 0 ? this.props.processForm(this.state)  : this.setPassword(demopassword)
+            return demopassword.length === 0 ? this.props.processForm(this.state).then(() => {
+                this.props.history.push('/movies')
+            })  : this.setPassword(demopassword)
         }, 50)
 
        
@@ -124,14 +129,14 @@ class SessionForm extends React.Component {
                                 <input type="text" value={this.state.username} placeholder="Username" onChange={this.update("username")} />
                             </label>
                                 <div className='login-errors'>
-                                    <li>{userError}</li> 
+                                    <li id='signup-error'>{userError}</li> 
                                 </div>
                             <br/>
                             <label htmlFor="">
                                 <input type="password" value={this.state.password} placeholder='Password' onChange={this.update('password')} />
                             </label>
-                            <div>
-                                <li>{passwordError}</li>
+                            <div >
+                                <li id='signup-error'>{passwordError}</li>
                             </div>
                             <br/>
                             <input type="submit" value='Signup' className='form-btn' />
