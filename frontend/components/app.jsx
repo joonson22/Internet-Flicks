@@ -3,6 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container'
 import NavBarContainer from './navbar/nav_bar_container'
+import MoviesContainer from './movies/movies_container'
 import {Route, Switch} from 'react-router-dom'
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import Page from './404/404'
@@ -12,6 +13,8 @@ const App = () => (
         <Switch>
             <AuthRoute path='/login' component={LoginFormContainer} />
             <AuthRoute path='/signup' component={SignupFormContainer} />
+            <ProtectedRoute exact path='/movies' component={MoviesContainer} />
+            <ProtectedRoute exact path='/movies/:movieId' component={MoviesContainer} />
             <Route exact path="/" component={GreetingContainer} />
             <Route component={Page} />
         </Switch>
