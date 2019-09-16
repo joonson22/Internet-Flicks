@@ -9,36 +9,37 @@ class Movies extends React.Component {
     }
 
     render (){
-        
+        let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
+        let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
         return(
             <div className='movie-container'>
                 
                 <div className='action-container'>
                     <h1>Action</h1>
                     <ul>
-                        {this.props.movies.map((movie, i) => {
+                        {actionMovies.map((movie, i) => {
                             return <MovieItem movie={movie} key={i} />
                         })}
                     </ul>
                 </div>
 
-                {/* <div className='comedy-container'>
+                 <div className='comedy-container'>
                     <h1>Comedy</h1>
                     <ul>
-                        {this.props.movies.map((movie, i) => {
+                        {comedyMovies.map((movie, i) => {
                             return <MovieItem movie={movie} key={i} />
                         })}
                     </ul>
                 </div>
 
-                <div className='horror-container'>
+                {/* <div className='horror-container'>
                     <h1>Horror</h1>
                     <ul>
                         {this.props.movies.map((movie, i) => {
                             return <MovieItem movie={movie} key={i} />
                         })}
                     </ul>
-                </div> */}
+                </div>  */}
 
                 
             </div>
