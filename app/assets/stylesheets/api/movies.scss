@@ -4,10 +4,96 @@
 .movie-container {
     color: white;
     h1 {
-        color: black;
+        color: white;
+    }
+    
+    .comedy-container {
+        display: flex;
+        flex-direction: column;
+        // border-color: red;
+        // border-style: solid;
+    
+        .genre-title {
+            color: white;
+            // border-color: red;
+            // border-style: solid;
+        }
+    
+        .comedy-movies {
+            color: white;
+            border-color: red;
+            border-style: solid;
+            display: flex;
+            padding: 0;
+            &:hover {
+                .movie-item {
+                transform: translateX(-25%);
+                }
+            }
+            
+    
+            .movie-item {
+                color: white;
+                border-color: red;
+                border-style: solid;
+                text-decoration: none;
+                list-style: none;
+                flex: 0 0 19.7%;
+                text-align: center;
+                margin: 0 2px;
+                transition: transform 300ms ease 100ms;
+    
+                &:hover {
+                    transform: scale(1.5) !important;
+                }
+                &:hover ~ .movie-item {
+                    transform: translateX(25%);
+                }
+            }
+    
+        }
     }
 }
 
-.movie-item-container {
-    color: white;
-}
+
+
+
+// .comedy-container {
+//     display: flex;
+//     flex-direction: column;
+//     border-color: red;
+//     border-style: solid;
+// }
+
+// .comedy-movies {
+//         color: white;
+//         border-color: red;
+//         border-style: solid;
+//         display: flex;
+// }
+
+// .comedy-movies:hover .movie-item {
+//     transform: translateX(-25%);
+// }
+
+// .movie-item {
+//     color: white;
+//     border-color: red;
+//     border-style: solid;
+//     text-decoration: none;
+//     list-style: none;
+//     flex: 0 0 19.7%;
+//     text-align: center;
+//     margin: 0 2px;
+//     transition: transform 300ms ease 100ms;
+// }
+
+// .movie-item:hover {
+//     transform: scale(1.5) !important;
+// }
+
+// .movie-item:hover ~ .movie-item {
+//     transform: translateX(25%);
+// }
+
+
