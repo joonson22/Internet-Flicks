@@ -18,18 +18,48 @@ class Movies extends React.Component {
                     <h1>Action</h1>
                     <ul>
                         {actionMovies.map((movie, i) => {
-                            return <MovieItem movie={movie} key={i} />
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie}/>
                         })}
                     </ul>
                 </div>
 
                  <div className='comedy-container'>
-                    <h1>Comedy</h1>
-                    <ul>
+                     <div className='genre-title'> 
+                        <h1>Comedy</h1>
+                     </div>
+                     <ul className='comedy-movies'>
                         {comedyMovies.map((movie, i) => {
-                            return <MovieItem movie={movie} key={i} />
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie}/>
                         })}
-                    </ul>
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} fetchMovie={this.props.fetchMovie} />
+                        })}
+                     </ul>
                 </div>
 
                 {/* <div className='horror-container'>
@@ -40,8 +70,6 @@ class Movies extends React.Component {
                         })}
                     </ul>
                 </div>  */}
-
-                
             </div>
         )
     }
