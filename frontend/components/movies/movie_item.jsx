@@ -10,6 +10,7 @@ class MovieItem extends React.Component {
         }
         this.handleEnter = this.handleEnter.bind(this)
         // this.handleLeave - this.handleLeave.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     handleEnter() {
@@ -33,25 +34,18 @@ class MovieItem extends React.Component {
     render() {
         
         return(
-            <li className='movie-item' >
-                {/* <h1>{this.props.movie.title}</h1> */}
-                {this.state.flag ? (
-                    <img src={this.props.movie.photoUrl} width='251' height='141' alt=""  onMouseEnter={this.handleEnter}/>
-                ) : (
-                    <video width='251' height='141' controls onMouseLeave={this.handleLeave.bind(this)}>
-                        <source src={this.props.movie.videoUrl} type='video/mp4'/>
-                    </video>
-                )      
-                }
-                <button onClick={this.handleClick} className='popup-btn'></button>
-                {this.state.popup ? 
-                    (
-                        <MovieItemPopout movie={this.props.movie} />
+                <li  className='movie-item'>
+                    {/* <h1>{this.props.movie.title}</h1> */}
+                    {this.state.flag ? (
+                        <img src={this.props.movie.photoUrl} width='251' height='141' alt=""  onMouseEnter={this.handleEnter}/>
                     ) : (
-                        ""
-                    )
-                }
-            </li>
+                        <video width='251' height='141' controls onMouseLeave={this.handleLeave.bind(this)}>
+                            <source src={this.props.movie.videoUrl} type='video/mp4'/>
+                        </video>
+                    )      
+                    }
+                    {/* <button onClick={this.handleClick} className='popup-btn'></button> */}
+                </li>     
         )
     }
 }
