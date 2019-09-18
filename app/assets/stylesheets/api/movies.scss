@@ -25,9 +25,10 @@
             border-style: solid;
             display: flex;
             padding: 0;
+            
             &:hover {
                 .movie-item {
-                transform: translateX(-25%);
+                transform: translateX(-35%);
                 }
             }
             
@@ -36,21 +37,33 @@
                 color: white;
                 border-color: red;
                 border-style: solid;
+                position: relative;
                 text-decoration: none;
                 list-style: none;
-                flex: 0 0 19.7%;
+                // flex: 0 0 19.7%;
                 text-align: center;
                 margin: 0 2px;
                 transition: transform 300ms ease 100ms;
+
                 
                 &:hover {
                     transform: scale(1.5) !important;
                 }
                 &:hover ~ .movie-item {
-                    transform: translateX(25%);
+                    transform: translateX(35%);
                 }
 
+                link {
+                    font-size: 100px;
+                }
 
+                .popout-btn {
+                    position: absolute;
+                    bottom: 10px;
+                }
+
+               
+                
             }
     
         }
@@ -58,22 +71,47 @@
 }
 
 .movie-popout {
-    margin-top: 40px;
-    height: 300px;
+    // margin-top: 40px;
     position: relative;
-    width: 100vw;
+    // width: 1800px;
+    // height: 580px;
+    // height: 50vh;
+    // width: 100vw;
 }
 
 .popout-bg {
     display: flex;
-    height: 100%;
+    // height: 100%;
+    border-color: red;
+    border-style: solid;
+    // width: 1800px;
+    width: 93.7vw;
+    // height: 580px;
+    height: 62vh;
+
 }
+
+
 
 
 .popout-left {
     background: black;
-    width: 30%;
+    width: 40%;
     position: relative;
+}
+
+.popout-left h1 {
+    font-size: 450%;
+    margin-left: 13%;
+}
+.popout-left h2 {
+    font-size: 250%;
+    margin-left: 13%;
+}
+
+.popout-left h3 {
+    font-size: 100%;
+    margin-left: 13%;
 }
 
 .popout-left:before {
@@ -90,18 +128,16 @@
     width: 70%;
 }
 
-.popout-content { 
-  border-color: red;
-  border-style: solid;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 30px;
-  width: 100%;
+.popout-video {
+    width: 66vw;
+    height: 62vh;
+    margin-left: 9%;
 }
+
+.popout-right button {
+    position: absolute;
+}
+
 
 
 
