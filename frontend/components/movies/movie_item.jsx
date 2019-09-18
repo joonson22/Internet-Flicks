@@ -1,16 +1,16 @@
 import React from 'react';
-import MovieItemPopout from './movie_item_popout'
+import { Link } from 'react-router-dom'
 
 class MovieItem extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             flag: true,
-            popup: false
+        
         }
         this.handleEnter = this.handleEnter.bind(this)
         // this.handleLeave - this.handleLeave.bind(this)
-        this.handleClick = this.handleClick.bind(this)
+      
     }
 
     handleEnter() {
@@ -25,26 +25,29 @@ class MovieItem extends React.Component {
         })
     }
 
-    handleClick() {
-        this.setState({
-            popup: true
-        })
-    }
+ 
    
     render() {
         
         return(
-                <li  className='movie-item'>
+            <li className='movie-item' onMouseLeave={this.handleLeave.bind(this)}>
                     {/* <h1>{this.props.movie.title}</h1> */}
                     {this.state.flag ? (
-                        <img src={this.props.movie.photoUrl} width='251' height='141' alt=""  onMouseEnter={this.handleEnter}/>
+                    <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter}/>  
                     ) : (
-                        <video width='251' height='141' controls onMouseLeave={this.handleLeave.bind(this)}>
-                            <source src={this.props.movie.videoUrl} type='video/mp4'/>
-                        </video>
+                       <div>
+                           <video width='420' height='258' controls >
+                               <source src={this.props.movie.videoUrl} type='video/mp4'/>
+                           </video>
+                                <Link to={`/movies/${this.props.movie.id}`}>
+                                    <button onClick={this.props.openPopout} className='popout-btn'>
+                                    </button>
+                                </Link>
+                            
+                       </div>
                     )      
                     }
-                    {/* <button onClick={this.handleClick} className='popup-btn'></button> */}
+                    
                 </li>     
         )
     }
