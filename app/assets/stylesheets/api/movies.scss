@@ -42,19 +42,66 @@
                 text-align: center;
                 margin: 0 2px;
                 transition: transform 300ms ease 100ms;
-    
+                
                 &:hover {
                     transform: scale(1.5) !important;
                 }
                 &:hover ~ .movie-item {
                     transform: translateX(25%);
                 }
+
+
             }
     
         }
     }
 }
 
+.movie-popout {
+    margin-top: 40px;
+    height: 300px;
+    position: relative;
+    width: 100vw;
+}
+
+.popout-bg {
+    display: flex;
+    height: 100%;
+}
+
+
+.popout-left {
+    background: black;
+    width: 30%;
+    position: relative;
+}
+
+.popout-left:before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right,#000,transparent);
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 275px;
+}
+
+.popout-right {
+    width: 70%;
+}
+
+.popout-content { 
+  border-color: red;
+  border-style: solid;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  width: 100%;
+}
 
 
 
