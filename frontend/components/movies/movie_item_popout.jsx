@@ -18,8 +18,8 @@ class MovieItemPopout extends React.Component {
                         <h1>{this.props.movie.title}</h1>
                         <h3>{this.props.movie.rating} {this.props.movie.year}</h3>
                         <h2>{this.props.movie.body}</h2>
-                        <Link to=''
-                        <button></button>
+                        {/* <Link to=''
+                        <button></button> */}
                     </div>
                     <div className='popout-right'>
                         <video autoplay='autoplay' className='popout-video'>
