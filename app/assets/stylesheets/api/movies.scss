@@ -21,8 +21,8 @@
     
         .comedy-movies {
             color: white;
-            border-color: red;
-            border-style: solid;
+            // border-color: red;
+            // border-style: solid;
             display: flex;
             padding: 0;
             
@@ -35,8 +35,8 @@
     
             .movie-item {
                 color: white;
-                border-color: red;
-                border-style: solid;
+                // border-color: red;
+                // border-style: solid;
                 // position: relative;
                 text-decoration: none;
                 list-style: none;
@@ -83,8 +83,8 @@
 .popout-bg {
     display: flex;
     // height: 100%;
-    border-color: red;
-    border-style: solid;
+    // border-color: red;
+    // border-style: solid;
     // width: 1800px;
     width: 93.7vw;
     // height: 580px;
@@ -146,6 +146,12 @@
 .show-movie {
     width: 100vw;
     height: 100vh;
+}
+
+.index-movie {
+    width: 100vw;
+    height: 60vh;
+    
 }
 
 

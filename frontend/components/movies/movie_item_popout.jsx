@@ -11,6 +11,7 @@ class MovieItemPopout extends React.Component {
         if (!this.props.movie) {
             return null;
         }
+    
         return(
             <div className='movie-popout'>
                 <div className='popout-bg'>
@@ -18,14 +19,19 @@ class MovieItemPopout extends React.Component {
                         <h1>{this.props.movie.title}</h1>
                         <h3>{this.props.movie.rating} {this.props.movie.year}</h3>
                         <h2>{this.props.movie.body}</h2>
-                        {/* <Link to=''
-                        <button></button> */}
+                        <Link to={`/movie/${this.props.movie.id}`}>
+                            <button>Link to show page</button>
+                        </Link>
+
+                        <Link to='#'>
+                            <button>Link to my list</button>
+                        </Link>
                     </div>
                     <div className='popout-right'>
-                        <video autoplay='autoplay' className='popout-video'>
+                        <video autoPlay='autoplay' className='popout-video'>
                             <source src={this.props.movie.videoUrl} type='video/mp4' />
                         </video>
-                        <button onClick={this.props.closePopout}>Hello</button>
+                        <button onClick={this.props.closePopout}>Close popout</button>
                     </div>
                 </div>
             </div>

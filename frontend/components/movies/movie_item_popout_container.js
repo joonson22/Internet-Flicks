@@ -14,7 +14,7 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
     return({
-        closePopout: () => dispatch(closePopout),
+        closePopout: () => dispatch(closePopout()),
         fetchMovie: (id) => dispatch(fetchMovie(id))
     })
 }
