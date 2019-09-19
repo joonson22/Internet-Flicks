@@ -43,7 +43,9 @@ class MovieItem extends React.Component {
                                     <button onClick={this.props.openPopout} className='popout-btn'>
                                     </button>
                                 </Link>
-                            
+                            {/* <Link to={`/movie/${this.props.movie.id}`}>
+                                CLICK MEEEEEEEE
+                            </Link> */}
                        </div>
                     )      
                     }

@@ -37,7 +37,7 @@
                 color: white;
                 border-color: red;
                 border-style: solid;
-                position: relative;
+                // position: relative;
                 text-decoration: none;
                 list-style: none;
                 // flex: 0 0 19.7%;
@@ -59,7 +59,8 @@
 
                 .popout-btn {
                     position: absolute;
-                    bottom: 10px;
+                    left: 100px;
+                    top: 100px;
                 }
 
                
@@ -138,7 +139,14 @@
     position: absolute;
 }
 
+.show-container {
+    
+}
 
+.show-movie {
+    width: 100vw;
+    height: 100vh;
+}
 
 
 // .comedy-container {
