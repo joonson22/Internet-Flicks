@@ -16,11 +16,20 @@ class Movies extends React.Component {
     }
 
     render (){
+        if (this.props.movies.length === 0) {
+            return null;
+        }
+
+        let indexMovie = this.props.movies.filter(movie => movie.title === 'Forrest Gump')
         let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
         let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
         return(
             <div className='movie-container'>
-                
+                <div className='index-movie-container'>
+                    <video className='index-movie' width='500' height='500' controls >
+                        <source src={indexMovie[0].videoUrl} type='video/mp4' />
+                    </video> 
+                </div>
                 <div className='action-container'>
                     <h1>Action</h1>
                     <ul>
@@ -74,6 +83,7 @@ class Movies extends React.Component {
                         })}
                     </ul>
                 </div>  */}
+            
             </div>
         )
     }
