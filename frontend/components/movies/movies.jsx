@@ -22,7 +22,6 @@ class Movies extends React.Component {
         if (this.props.movies.length === 0) {
             return null;
         }
-
         let indexMovie = this.props.movies.filter(movie => movie.title === 'Forrest Gump')
         let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
         let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
