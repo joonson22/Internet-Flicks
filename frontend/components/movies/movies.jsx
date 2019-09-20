@@ -29,7 +29,7 @@ class Movies extends React.Component {
         return(
             <div className='movie-container'>
                 <div className='index-movie-container'>
-                    <video className='index-movie' width='500' height='500'  >
+                    <video className='index-movie' controls autoplay='autoplay' width='500' height='500'  >
                         <source src={indexMovie[0].videoUrl} type='video/mp4' />
                     </video> 
                     <div className='index-movie-content'>
@@ -88,11 +88,46 @@ class Movies extends React.Component {
                          null
                      )}
                 </div>
+                 <div className='comedy-container'>
+                     <div className='genre-title'> 
+                        <h1>Comedy</h1>
+                     </div>
+                     <ul className='comedy-movies'>
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                    
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                     </ul>
+                     {this.props.boolean ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
+                        </div>
+                     ) : (
+                         null
+                     )}
+                </div>
 
                
-                <div>
+                {/* <div>
                     <h1>FOOOOOOTTTTER</h1>
-                </div>
+                </div> */}
             </div>
         )
     }

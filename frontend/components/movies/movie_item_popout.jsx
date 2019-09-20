@@ -20,7 +20,8 @@ class MovieItemPopout extends React.Component {
                 <div className='popout-bg'>
                     <div className='popout-left'>
                         <h1>{this.props.movie.title}</h1>
-                        <h3>{this.props.movie.rating} {this.props.movie.year}</h3>
+                        <h3 className='rating-year'>{this.props.movie.rating} {this.props.movie.year}</h3>
+                        <h3 className='green-text'>Over 9000% Match</h3>
                         <h2>{this.props.movie.body}</h2>
                         <Link to={`/movie/${this.props.movie.id}`}>
                             <button className='popout-play-btn'>
