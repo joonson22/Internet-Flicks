@@ -1,3 +1,312 @@
 // Place all the styles related to the api/movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.movie-container {
+    color: white;
+    h1 {
+        color: white;
+    }
+    
+    .comedy-container {
+        display: flex;
+        flex-direction: column;
+        // border-color: red;
+        // border-style: solid;
+    
+        .genre-title {
+            color: white;
+            // border-color: red;
+            // border-style: solid;
+        }
+    
+        .comedy-movies {
+            color: white;
+            // border-color: red;
+            // border-style: solid;
+            display: flex;
+            padding: 0;
+            
+            &:hover {
+                .movie-item {
+                transform: translateX(-35%);
+                }
+            }
+            
+    
+            .movie-item {
+                color: white;
+                // border-color: red;
+                // border-style: solid;
+                // position: relative;
+                text-decoration: none;
+                list-style: none;
+                // flex: 0 0 19.7%;
+                text-align: center;
+                margin: 0 2px;
+                transition: transform 300ms ease 100ms;
+
+                
+                &:hover {
+                    transform: scale(1.5) !important;
+                }
+                &:hover ~ .movie-item {
+                    transform: translateX(35%);
+                }
+
+                link {
+                    font-size: 100px;
+                }
+
+                .popout-btn {
+                    position: absolute;
+                    top: 5%;
+                    left: 0%;
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    font-size: 120%;
+                    
+                }
+
+                
+               
+                
+            }
+    
+        }
+    }
+}
+
+.movie-popout {
+    margin-top: 0;
+    position: relative;
+    // width: 1800px;
+    // height: 580px;
+    // height: 50vh;
+    // width: 100vw;
+}
+
+.popout-bg {
+    display: flex;
+    // height: 100%;
+    // border-color: red;
+    // border-style: solid;
+    // width: 1800px;
+    margin-top: 0;
+    width: 100vw;
+    // height: 580px;
+    height: 62vh;
+
+}
+
+
+
+
+.popout-left {
+    background: black;
+    width: 40%;
+    position: relative;
+}
+
+.popout-left h1 {
+    font-size: 240%;
+    margin-left: 13%;
+}
+.popout-left h2 {
+    font-size: 160%;
+    margin-left: 13%;
+}
+
+.rating-year{
+    font-size: 85%;
+    margin-left: 40%;
+}
+
+.green-text {
+    color: rgb(4, 190, 4);
+    position: absolute;
+    top: 19.4%;
+    left: 13%;
+    font-size: 85%;
+}
+
+.popout-play-btn {
+    background-color: #E50914;
+    border-color: #E50914;
+    color: white;
+    font-size: 120%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20%; 
+    left: 13%;
+}
+.popout-play-btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.popout-mylist-btn {
+    background-color: black;
+    border-color: white;
+    color: white;
+    font-size: 120%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20%; 
+    left: 32%;
+}
+
+.popout-mylist-btn:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.popout-close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 120%;
+}
+
+
+
+.popout-left:before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right,#000,transparent);
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 275px;
+}
+
+.popout-right {
+    width: 70%;
+    position: relative;
+}
+
+.popout-video {
+    width: 66vw;
+    height: 62vh;
+    margin-left: 9%;
+}
+
+.popout-right button {
+    position: absolute;
+}
+
+.show-container {
+    
+}
+
+.show-movie {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.index-movie-container {
+    position: relative;
+}
+
+.index-movie-container h1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.index-play-btn {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: white;
+    font-size: 100%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 40%; 
+    left: 5%;
+    border-color: transparent;
+}
+
+.index-play-btn:hover {
+    background-color: rgba(175, 175, 175, 1);
+}
+
+.index-mylist-btn {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: white;
+    font-size: 100%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    border-color: transparent;
+    position: absolute;
+    top: 40%; 
+    left: 11%;
+}
+
+.index-mylist-btn:hover {
+    background-color: rgba(175, 175, 175, 1);
+}
+
+
+.index-movie {
+    width: 100vw;
+    height: 60vh;
+   
+}
+
+
+.show-pg-index-link {
+    font-size: 150%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+// .comedy-container {
+//     display: flex;
+//     flex-direction: column;
+//     border-color: red;
+//     border-style: solid;
+// }
+
+// .comedy-movies {
+//         color: white;
+//         border-color: red;
+//         border-style: solid;
+//         display: flex;
+// }
+
+// .comedy-movies:hover .movie-item {
+//     transform: translateX(-25%);
+// }
+
+// .movie-item {
+//     color: white;
+//     border-color: red;
+//     border-style: solid;
+//     text-decoration: none;
+//     list-style: none;
+//     flex: 0 0 19.7%;
+//     text-align: center;
+//     margin: 0 2px;
+//     transition: transform 300ms ease 100ms;
+// }
+
+// .movie-item:hover {
+//     transform: scale(1.5) !important;
+// }
+
+// .movie-item:hover ~ .movie-item {
+//     transform: translateX(25%);
+// }
+
+
