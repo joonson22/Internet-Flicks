@@ -8,7 +8,8 @@
 
     require 'open-uri'
 
-   
+    User.destroy_all
+    Movie.destroy_all
 
 
 
