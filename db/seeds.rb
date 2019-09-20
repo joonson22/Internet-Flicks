@@ -62,8 +62,12 @@
     
 
     movies.each do |movie|
+        
+        title1 = movie.title.split(' ').join('+')
         file = open('https://internet-flicks-seeds.s3-us-west-1.amazonaws.com/freshavo.mp4')
+        file2 = open("https://internet-flicks-seeds.s3-us-west-1.amazonaws.com/#{title1}+Thumbnail.jpg")
         movie.video.attach(io: file, filename: 'freshavo.mp4')
+        movie.photo.attach(io: file2, filename: "#{movie.title} Thumbnail.jpg")
     end
 
 
