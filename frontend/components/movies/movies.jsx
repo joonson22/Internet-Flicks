@@ -65,6 +65,48 @@ class Movies extends React.Component {
                             null
                         )}
                 </div>
+                 <div className='comedy-container'>
+                     <div className='genre-title'> 
+                        <h1>Comedy</h1>
+                     </div>
+                     <ul className='comedy-movies'>
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                        {comedyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout}/>
+                        })}
+                    
+                     </ul>
+                     {this.props.boolean ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
+                        </div>
+                     ) : (
+                         null
+                     )}
+                </div>
+
+                <div className='action-container'>
+                    <div className='genre-title'>
+                        <h1>Action</h1>
+                    </div>
+                    <ul className='action-movies'>
+                        {actionMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
+                        })}
+                        {actionMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
+                        })}
+                    </ul>
+                    {this.props.boolean ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId} />
+                        </div>
+                    ) : (
+                            null
+                        )}
+                </div>
 
                  <div className='comedy-container'>
                      <div className='genre-title'> 
