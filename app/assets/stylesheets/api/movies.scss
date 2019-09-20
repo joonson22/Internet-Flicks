@@ -146,14 +146,20 @@
 .show-movie {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .index-movie {
     width: 100vw;
     height: 60vh;
-    
+   
 }
 
+.abc {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
 
 // .comedy-container {
 //     display: flex;

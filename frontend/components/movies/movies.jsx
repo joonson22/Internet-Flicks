@@ -26,7 +26,7 @@ class Movies extends React.Component {
         return(
             <div className='movie-container'>
                 <div className='index-movie-container'>
-                    <video className='index-movie' width='500' height='500' controls >
+                    <video className='index-movie' width='500' height='500'  >
                         <source src={indexMovie[0].videoUrl} type='video/mp4' />
                     </video> 
                 </div>
@@ -75,15 +75,10 @@ class Movies extends React.Component {
                      )}
                 </div>
 
-                {/* <div className='horror-container'>
-                    <h1>Horror</h1>
-                    <ul>
-                        {this.props.movies.map((movie, i) => {
-                            return <MovieItem movie={movie} key={i} />
-                        })}
-                    </ul>
-                </div>  */}
-            
+               
+                <div>
+                    <h1>FOOOOOOTTTTER</h1>
+                </div>
             </div>
         )
     }
