@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 class MovieShow extends React.Component {
     componentDidMount(){
         this.props.fetchMovie(this.props.match.params.movieId)
@@ -7,6 +9,7 @@ class MovieShow extends React.Component {
     }
 
     render() {
+      
         if (!this.props.movie) {
             return null
         }
@@ -15,8 +18,8 @@ class MovieShow extends React.Component {
                 <video width='500' height='500' controls className='show-movie'>
                     <source src={this.props.movie.videoUrl} type='video/mp4'/>
                 </video> 
-                <Link to='/movies'>
-                    <img src="app/assets/images/left-arrow.png" alt=""/>
+                <Link to='/movies' className='abc'>
+                    <FontAwesomeIcon icon={faArrowLeft} />
                 Link back to Index
                 </Link>
                 
