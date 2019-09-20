@@ -6,17 +6,24 @@
     h1 {
         color: white;
     }
-    
+   //------------------Comedy Container------------------------- 
     .comedy-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 10%;
         // border-color: red;
         // border-style: solid;
     
         .genre-title {
             color: white;
+            font-size: 75%;
             // border-color: red;
             // border-style: solid;
+             margin-bottom: 0;
+
+            h1 {
+                margin-bottom: 0;
+            }
         }
     
         .comedy-movies {
@@ -60,7 +67,7 @@
                 .popout-btn {
                     position: absolute;
                     top: 5%;
-                    left: 0%;
+                    right: 0%;
                     background-color: transparent;
                     color: white;
                     border: none;
@@ -71,6 +78,78 @@
                 
                
                 
+            }
+    
+        }
+    }
+    //------------------ACTION Container------------------------- 
+    .action-container {
+        display: flex;
+        flex-direction: column;
+        // border-color: red;
+        // border-style: solid;
+        margin-bottom: 2%;
+    
+        .genre-title {
+            color: white;
+            font-size: 75%;
+            margin-bottom: 0;
+
+            h1 {
+                margin-bottom: 0;
+            }
+            // border-color: red;
+            // border-style: solid;
+        }
+    
+        .action-movies {
+            color: white;
+            // border-color: red;
+            // border-style: solid;
+            display: flex;
+            padding: 0;
+            
+            &:hover {
+                .movie-item {
+                transform: translateX(-35%);
+                }
+            }
+            
+    
+            .movie-item {
+                color: white;
+                // border-color: red;
+                // border-style: solid;
+                // position: relative;
+                text-decoration: none;
+                list-style: none;
+                // flex: 0 0 19.7%;
+                text-align: center;
+                margin: 0 2px;
+                transition: transform 300ms ease 100ms;
+
+                
+                &:hover {
+                    transform: scale(1.5) !important;
+                }
+                &:hover ~ .movie-item {
+                    transform: translateX(35%);
+                }
+
+                link {
+                    font-size: 100px;
+                }
+
+                .popout-btn {
+                    position: absolute;
+                    top: 5%;
+                    right: 0%;
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    font-size: 120%;
+                    
+                }
             }
     
         }
@@ -125,7 +204,7 @@
 .green-text {
     color: rgb(4, 190, 4);
     position: absolute;
-    top: 19.4%;
+    top: 20.7%;
     left: 13%;
     font-size: 85%;
 }
@@ -217,7 +296,7 @@
 .index-movie-container h1 {
     position: absolute;
     top: 20%;
-    left: 5%;
+    left: 2%;
 }
 
 .index-play-btn {
@@ -229,7 +308,7 @@
     border-radius: 15px;
     position: absolute;
     top: 40%; 
-    left: 5%;
+    left: 2%;
     border-color: transparent;
 }
 
@@ -247,7 +326,7 @@
     border-color: transparent;
     position: absolute;
     top: 40%; 
-    left: 11%;
+    left: 9%;
 }
 
 .index-mylist-btn:hover {
@@ -257,7 +336,7 @@
 
 .index-movie {
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
    
 }
 
