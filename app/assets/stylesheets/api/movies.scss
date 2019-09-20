@@ -59,10 +59,12 @@
 
                 .popout-btn {
                     position: absolute;
-                    left: 100px;
-                    top: 100px;
+                    top: 5%;
+                    left: 0%;
+                    
                 }
 
+                
                
                 
             }
@@ -72,7 +74,7 @@
 }
 
 .movie-popout {
-    // margin-top: 40px;
+    margin-top: 0;
     position: relative;
     // width: 1800px;
     // height: 580px;
@@ -86,7 +88,8 @@
     // border-color: red;
     // border-style: solid;
     // width: 1800px;
-    width: 93.7vw;
+    margin-top: 0;
+    width: 100vw;
     // height: 580px;
     height: 62vh;
 
@@ -102,18 +105,55 @@
 }
 
 .popout-left h1 {
-    font-size: 450%;
+    font-size: 240%;
     margin-left: 13%;
 }
 .popout-left h2 {
-    font-size: 250%;
+    font-size: 160%;
     margin-left: 13%;
 }
 
 .popout-left h3 {
-    font-size: 100%;
+    font-size: 85%;
     margin-left: 13%;
 }
+
+.popout-play-btn {
+    background-color: #E50914;
+    border-color: #E50914;
+    color: white;
+    font-size: 120%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20%; 
+    left: 13%;
+}
+.popout-play-btn:hover {
+    
+}
+
+.popout-mylist-btn {
+    background-color: black;
+    border-color: white;
+    color: white;
+    font-size: 120%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20%; 
+    left: 32%;
+}
+
+.popout-close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+
 
 .popout-left:before {
     content: '';
@@ -127,6 +167,7 @@
 
 .popout-right {
     width: 70%;
+    position: relative;
 }
 
 .popout-video {
@@ -148,6 +189,41 @@
     height: 100vh;
     position: relative;
 }
+
+.index-movie-container {
+    position: relative;
+}
+
+.index-movie-container h1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.index-play-btn {
+    background-color: gray;
+    color: white;
+    font-size: 100%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 40%; 
+    left: 5%;
+}
+
+.index-mylist-btn {
+    background-color: gray;
+    color: white;
+    font-size: 100%;
+    padding: 0.6em;
+    text-decoration: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 40%; 
+    left: 11%;
+}
+
 
 .index-movie {
     width: 100vw;

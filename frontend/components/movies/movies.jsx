@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import MovieItem from './movie_item'
 import MovieItemPopoutContainer from './movie_item_popout_container'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 class Movies extends React.Component {
     constructor(props) {
@@ -29,6 +32,17 @@ class Movies extends React.Component {
                     <video className='index-movie' width='500' height='500'  >
                         <source src={indexMovie[0].videoUrl} type='video/mp4' />
                     </video> 
+                    <div className='index-movie-content'>
+                        <h1>{indexMovie[0].title}</h1>
+                        <button className='index-play-btn'>
+                            <FontAwesomeIcon icon={faPlay} />
+                            Play
+                        </button>
+                        <button className='index-mylist-btn'>
+                            <FontAwesomeIcon icon={faPlus} />
+                            My list
+                        </button>
+                    </div>
                 </div>
                 <div className='action-container'>
                     <h1>Action</h1>
