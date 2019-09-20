@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: black;
+    background-color: #141414;
     z-index: -1;
 }
 //NavBar--------------------------------------------------------------
@@ -12,21 +12,58 @@ body {
      display: flex;
      justify-content: space-between;
     //  background-color: black;
+
+    .nav-right {
+        display: flex;
+        
+        h1 {
+            width: 13vw;
+            font-size: 135%;
+            margin-bottom: 0%;
+            margin-top: 1%
+        }
+        .nav-logout{
+         background-color: #E50914;
+         color: white;
+         padding: 0;
+         font-size: 100%;
+         padding-right: 0.8%;
+         text-decoration: none;
+         border-radius: 15px;
+         border-color: #E50914;
+         height: 5vh;
+        
+         width: 5vw;
+        
+         margin-right: 3.8%;
+         box-shadow: 0 4px rgb(146, 1, 8);
+         
+     }
+     .nav-logout:hover {
+         background-color: rgb(255, 0, 0);
+     }
+
+     .nav-logout:active {
+         background-color: rgb(255, 0, 0);
+        box-shadow: 0 3px #666;
+        transform: translateY(3px);
+     }
+    }
      .splash-login-link{
          background-color: #E50914;
          color: white;
          padding: 0.6em;
       
-         padding-right: 0.2%;
+         padding-right: 0.8%;
          text-decoration: none;
          border-radius: 15px;
         //  height: 20px;
          height: 3vh;
         //  width: 50px;
-         width: 3vw;
+         width: 3.5vw;
         //  margin-right: 50px;
          margin-right: 3.8%;
-         box-shadow: 0 6px rgb(146, 1, 8);
+         box-shadow: 0 4px rgb(146, 1, 8);
          
      }
      .splash-login-link:hover {
@@ -35,8 +72,8 @@ body {
 
      .splash-login-link:active {
          background-color: rgb(255, 0, 0);
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
+        box-shadow: 0 3px #666;
+        transform: translateY(3px);
      }
  }
 
@@ -86,7 +123,7 @@ body {
             align-self: center;
             // margin-bottom: 250px;
             margin-bottom: 19%;
-            box-shadow: 0 6px rgb(146, 1, 8);
+            box-shadow: 0 4px rgb(146, 1, 8);
         }
 
         .signup-link:hover {
@@ -95,8 +132,8 @@ body {
 
         .signup-link:active {
          background-color: rgb(255, 0, 0);
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
+        box-shadow: 0 3px #666;
+        transform: translateY(3px);
      }
 
     }
@@ -209,7 +246,7 @@ body {
         margin-top: 5%;
         //  margin-left: 2px;
         margin-left: 1%;
-        box-shadow: 0 6px rgb(146, 1, 8);
+        box-shadow: 0 5px rgb(146, 1, 8);
          
      }
 
@@ -219,7 +256,7 @@ body {
 
      .form-btn:active {
          background-color: rgb(255, 0, 0);
-        box-shadow: 0 5px #666;
+        box-shadow: 0 4px #666;
         transform: translateY(4px);
      }
      
@@ -255,9 +292,10 @@ body {
         
      }
 
-     .signup-error {
-        //  margin-left: 2.9%;
-        margin-right: 12%;
+     #signup-error {
+        margin-left: 3%;
+        
+    
      }
    
      .demo-btn {
@@ -269,7 +307,7 @@ body {
         // font-size: 16px;
         font-size: 100%;
         border-radius: 5px;
-        box-shadow: 0 6px #999;
+        box-shadow: 0 4px #999;
        
      }
     
@@ -280,8 +318,8 @@ body {
 
       .demo-btn:active {
         background-color: rgb(230, 230, 230);
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
+        box-shadow: 0 4px #666;
+        transform: translateY(3px);
      }
  }
 

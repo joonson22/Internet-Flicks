@@ -8,10 +8,10 @@ export const fetchMovies = () => {
 }
 
 export const fetchMovie = (id) => {
-    return(
+    return (
         $.ajax({
             method: "GET",
             url: `api/movies/${id}`
         })
     )
-}
+} 
