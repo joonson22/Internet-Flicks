@@ -25,6 +25,7 @@ class Movies extends React.Component {
         let indexMovie = this.props.movies.filter(movie => movie.title === 'The Matrix')
         let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
         let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
+        let horrorMovies = this.props.movies.filter(movie => movie.genre === 'Horror')
         return(
             <div className='movie-container'>
                 <div className='index-movie-container'>
@@ -54,6 +55,26 @@ class Movies extends React.Component {
                             return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
                         })}
                         {actionMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
+                        })}
+                    </ul>
+                    {this.props.boolean ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId} />
+                        </div>
+                    ) : (
+                            null
+                        )}
+                </div>
+                <div className='action-container'>
+                    <div className='genre-title'>
+                        <h1>Horror</h1>
+                    </div>
+                    <ul className='action-movies'>
+                        {horrorMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
+                        })}
+                        {horrorMovies.map((movie, i) => {
                             return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} />
                         })}
                     </ul>

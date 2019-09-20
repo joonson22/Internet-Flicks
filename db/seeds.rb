@@ -42,13 +42,23 @@
         },
         {
             title: "The Karate Kid", genre: "Action", body: "Kid does chores instead of kung-fu", year: "1984", rating: "PG-13"
-        }
+        },
+        {
+            title: "Nosferatu", genre: "Horror", body: "Walking problems", year: "1922", rating: "Rated R"
+        },
+        {
+            title: "The Shining", genre: "Horror", body: "Crazy guy with axe", year: "1980", rating: "Rated R"
+        },
+        {
+            title: "Jaws", genre: "Horror", body: "Shark gone wild", year: "1975", rating: "Rated R"
+        },
+        {
+            title: "A Nightmare on Elm Street", genre: "Horror", body: "My boi Freddy Krueger", year: "1984", rating: "Rated R"
+        },
     ])
 
 
     movies.each do |movie|
-
-    
         title1 = movie.title.split(' ').join('+')
         video1 = movie.title.split(' ').join('+')
         file = open("https://internet-flicks-seeds.s3-us-west-1.amazonaws.com/#{video1}.mp4")
