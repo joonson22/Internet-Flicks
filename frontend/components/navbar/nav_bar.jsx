@@ -5,6 +5,7 @@ import {withRouter} from 'react-router'
 class NavBar extends React.Component {
 
     render() {
+       
         return (
            this.props.navbar ? (
                <div className='nav-bar-container'>
@@ -12,7 +13,10 @@ class NavBar extends React.Component {
                         <img src="https://fontmeme.com/permalink/190911/42359bbf84e020be8f811016380611ac.png" alt="netflix-font" border="0"></img>
                    </Link>
                     {this.props.user ? (
-                        <button onClick={this.props.logout}>Logout</button>
+                        <div className="nav-right">
+                            <h1>Welcome Cutie</h1>
+                            <button onClick={this.props.logout} className='nav-logout'>Logout</button>
+                        </div>
                     ) : (
                         <Link to = 'login' className = 'splash-login-link'>Sign in</Link>
                     ) }

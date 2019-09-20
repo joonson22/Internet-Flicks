@@ -18,9 +18,9 @@ class MovieShow extends React.Component {
                 <video width='500' height='500' controls className='show-movie'>
                     <source src={this.props.movie.videoUrl} type='video/mp4'/>
                 </video> 
-                <Link to='/movies' className='abc'>
+                <Link to='/movies' className='show-pg-index-link'>
                     <FontAwesomeIcon icon={faArrowLeft} />
-                Link back to Index
+                    Back to Browse
                 </Link>
                 
             </div>
