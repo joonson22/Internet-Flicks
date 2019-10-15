@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 class MovieItem extends React.Component {
     constructor(props){
         super(props);
@@ -37,12 +37,13 @@ class MovieItem extends React.Component {
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter}/>  
                     ) : (
                        <div>
-                           <video width='420' height='258' controls >
+                        <img src={this.props.movie.photoUrl} width='420' height='258' alt="" onMouseEnter={this.handleEnter} />  
+                           {/* <video width='420' height='258' controls >
                                <source src={this.props.movie.videoUrl} type='video/mp4'/>
-                           </video>
+                           </video> */}
                                 <Link to={`/movies/${this.props.movie.id}`}>
                                     <button onClick={this.props.openPopout} className='popout-btn'>
-                                        <FontAwesomeIcon icon={faCaretDown} />
+                                        <FontAwesomeIcon icon={faChevronDown} />
                                     </button>
                                 </Link>
                            
