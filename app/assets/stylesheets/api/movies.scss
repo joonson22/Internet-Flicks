@@ -35,7 +35,7 @@
             
             &:hover {
                 .movie-item {
-                transform: translateX(-35%);
+                transform: translateX(-14%);
                 }
             }
             
@@ -54,10 +54,10 @@
 
                 
                 &:hover {
-                    transform: scale(1.5) !important;
+                    transform: scale(1.2) !important;
                 }
                 &:hover ~ .movie-item {
-                    transform: translateX(35%);
+                    transform: translateX(14%);
                 }
 
                 link {
@@ -111,7 +111,7 @@
             
             &:hover {
                 .movie-item {
-                transform: translateX(-35%);
+                transform: translateX(-14%);
                 }
             }
             
@@ -130,10 +130,10 @@
 
                 
                 &:hover {
-                    transform: scale(1.5) !important;
+                    transform: scale(1.2) !important;
                 }
                 &:hover ~ .movie-item {
-                    transform: translateX(35%);
+                    transform: translateX(14%);
                 }
 
                 link {

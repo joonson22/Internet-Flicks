@@ -4,7 +4,7 @@ import {login, clearErrors} from '../../actions/session_actions'
 
 
 const msp = state => {
- 
+    
     return({
         errors: state.errors.session,
         formType: "login"

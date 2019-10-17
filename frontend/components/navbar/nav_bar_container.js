@@ -3,7 +3,8 @@ import {connect} from 'react-redux'
 import {logout} from '../../actions/session_actions'
 
 
-const msp = state => {
+const msp = (state, ownProps) => {
+   
     return ({
         user: state.entities.users[state.session.id],
         navbar: state.ui.navbar,
