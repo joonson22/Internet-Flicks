@@ -21,6 +21,7 @@ class SessionForm extends React.Component {
             [field]: e.target.value
         })
     }
+    
     handleSubmit(e) {
         e.preventDefault();
         

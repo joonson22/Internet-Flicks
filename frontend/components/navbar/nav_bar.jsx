@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../search/search';
+import SearchContainer from '../search/search_container';
 
 
 class NavBar extends React.Component {
@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                    </Link>
                     {this.props.user ? (
                         <div className="nav-right">
-                            <input type="text" placeholder='Title, genre...' onChange={this.handleChange.bind(this)}/>
+                            <SearchContainer />
                             <h1>Welcome {this.props.user.username}</h1>
                             <button onClick={this.props.logout} className='nav-logout'>Logout</button>
                         </div>

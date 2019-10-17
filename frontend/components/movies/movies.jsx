@@ -28,7 +28,7 @@ class Movies extends React.Component {
         return(
             <div className='movie-container'>
                 <div className='index-movie-container'>
-                    <video className='index-movie' controls autoplay='autoplay'   >
+                    <video className='index-movie' controls autoPlay='autoPlay'   >
                         <source src={indexMovie[0].videoUrl} type='video/mp4' />
                     </video> 
                     <div className='index-movie-content'>
