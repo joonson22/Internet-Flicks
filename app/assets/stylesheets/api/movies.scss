@@ -32,6 +32,8 @@
             // border-style: solid;
             display: flex;
             padding: 0;
+            // height: 258px;
+            align-items: center;
             
             &:hover {
                 .movie-item {
@@ -108,6 +110,7 @@
             // border-style: solid;
             display: flex;
             padding: 0;
+            align-items: center;
             
             &:hover {
                 .movie-item {
