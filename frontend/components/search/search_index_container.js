@@ -5,7 +5,7 @@ import { fetchMovies} from '../../actions/movie_actions';
 
 
 const msp = state => {
-debugger
+// debugger
     return({
         search: state.ui.search,
         movies: Object.values(state.entities.movies)

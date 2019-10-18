@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/nav_bar_container'
 import MoviesContainer from './movies/movies_container'
 import MovieShowContainer from './movies/movie_show_container';
 import SearchIndexContainer from './search/search_index_container';
+import MylistContainer from './mylist/mylist_container';
 import {Route, Switch} from 'react-router-dom'
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import Page from './404/404'
@@ -21,6 +22,7 @@ const App = () => (
             <AuthRoute path='/signup' component={SignupFormContainer} />
             <ProtectedRoute exact path='/movies' component={MoviesContainer} />
             <ProtectedRoute exact path='/search' component={SearchIndexContainer} />
+            <ProtectedRoute exact path='/mylist' component={MylistContainer} />
             <ProtectedRoute exact path='/movies/:movieId' component={MoviesContainer} />
             <ProtectedRoute exact path='/movie/:movieId' component={MovieShowContainer} />
             <Route exact path="/" component={GreetingContainer} />

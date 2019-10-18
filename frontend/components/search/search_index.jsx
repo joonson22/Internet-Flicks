@@ -1,15 +1,35 @@
 import React from 'react';
-import MovieItem from '../movies/movie_item';
+import SearchItem from './search_item';
 
 class SearchIndex extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            flag: true
+        }
+        this.handleEnter = this.handleEnter.bind(this)
+        // this.handleLeave = this.handleLeave.bind(this)
+    }
     componentDidMount(){
         this.props.showNavbar();
         this.props.fetchMovies();
     }
 
+    handleEnter() {
+        this.setState({
+            flag: false
+        })
+    }
+
+    handleLeave() {
+        this.setState({
+            flag: true
+        })
+    }
+
 
     render() {
-        debugger
+        // debugger
         if (this.props.movies.length === 0) {
             return null;
         }
@@ -18,12 +38,16 @@ class SearchIndex extends React.Component {
         })
 
         return(
-            <div>
+            <div className='search-index-container'>
                 <ul>
                     {filteredMovies.map(movie => {
-                        return <MovieItem movie={movie} />
+                        return <SearchItem movie={movie}/>
+                    })}
+                    {filteredMovies.map(movie => {
+                        return <SearchItem movie={movie}/>
                     })}
                 </ul>
+             
             </div>
         )
     }
