@@ -6,12 +6,16 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6}, allow_nil: true
 
     after_initialize :ensure_session_token
-    
+    after_create :build_mylist
+
     has_one :mylist,
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Mylist
 
+    def build_mylist
+        Mylist.create(user: self)
+    end
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)
