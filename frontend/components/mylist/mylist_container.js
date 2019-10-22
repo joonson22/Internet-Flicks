@@ -6,7 +6,7 @@ import Mylist from './mylist'
 const msp = state => {
     debugger
     return({
-        user: state.entities.user[state.session.id]
+        user: state.entities.users[state.session.id]
     })
 }
 
