@@ -1,4 +1,4 @@
-import {RECEIVE_MYLIST} from '../actions/mylist_actions';
+import {RECEIVE_MYLIST, REMOVE_MYLIST} from '../actions/mylist_actions';
 
 const mylistReducer = (oldState = {}, action) => {
     Object.freeze();
@@ -6,7 +6,11 @@ const mylistReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_MYLIST:
-            return action.mylist;
+            return Object.assign({}, oldState, { [action.mylist.id]: action.mylist });
+        case REMOVE_MYLIST:
+            newState = Object.assign({}, oldState);
+            delete newState[action.mylistId];
+            return newState;
         default:
             return oldState;
     }

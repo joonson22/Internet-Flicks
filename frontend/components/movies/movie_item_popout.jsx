@@ -5,11 +5,23 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 class MovieItemPopout extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleMylist = this.handleMylist.bind(this);
+    }
     componentDidMount() {
         this.props.fetchMovie(this.props.moviePopoutId)
     }
 
-
+    handleMylist() {
+        let mylist = {
+            mylist: {
+                user_id: this.props.user.id,
+                movie_id: this.props.movie.id
+            }
+        }
+        this.props.createMylist(mylist);
+    }
     render() {
         if (!this.props.movie) {
             return null;
@@ -31,7 +43,7 @@ class MovieItemPopout extends React.Component {
                         </Link>
 
                         <Link to='#'>
-                            <button className='popout-mylist-btn'>
+                            <button className='popout-mylist-btn' onClick={this.handleMylist}>
                                 <FontAwesomeIcon icon={faPlus} />
                                 My list
                             </button>
