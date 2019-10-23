@@ -4,16 +4,18 @@ import { fetchMylist } from '../../actions/mylist_actions'
 import Mylist from './mylist'
 
 const msp = state => {
-    debugger
+    // debugger
     return({
-        user: state.entities.users[state.session.id]
+        user: state.entities.users[state.session.id],
+        mylists: Object.values(state.entities.mylist),
+        movies: Object.values(state.entities.movies)
     })
 }
 
 const mdp = dispatch => {
     return({
         fetchMovies: () => dispatch(fetchMovies()),
-        fetchMylist: (id) => dispatch(fetchMylist(id))
+        fetchMylist: () => dispatch(fetchMylist())
     })
 }
 

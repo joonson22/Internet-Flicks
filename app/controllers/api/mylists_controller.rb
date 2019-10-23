@@ -1,6 +1,10 @@
 class Api::MylistsController < ApplicationController
-    def show
-        @mylist = Mylist.find(params[:id])
+    def index
+        @user = current_user.id
+        @mylists = Mylist.all.to_a
+        
+        #@mylists.filter(mylist => mylist.user_id === @user)
+        
     end
 
     def create

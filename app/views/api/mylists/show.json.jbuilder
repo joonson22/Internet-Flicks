@@ -1,1 +1,0 @@
-json.extract! @mylist, :id, :user_id, :movie_id
