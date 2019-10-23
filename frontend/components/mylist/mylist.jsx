@@ -1,12 +1,21 @@
 import React from 'react';
+import MylistItem from './mylist_item';
 
 class Mylist extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleDelete = this.handleDelete.bind(this)
+    }
     componentDidMount(){
-        // debugger
         this.props.fetchMylist()
         this.props.fetchMovies()
     }
 
+    handleDelete() {
+        this.props.deleteMylist(this.props.movie.id)
+    }
+    
+    
     render() {
         // debugger
         if (!this.props.mylists) {
@@ -28,8 +37,11 @@ class Mylist extends React.Component {
         return(
             <div>
                 <ul>
-                    {movies.map(movie => {
-                        return movie.title
+                    {movies.map((movie,i) => {
+                        let mylistId = this.props.mylists[i].id
+                        return <li>
+                                <MylistItem movie={movie} deleteMylist={this.props.deleteMylist} mylistId={mylistId} fetchMylist={this.props.fetchMylist}/>
+                            </li>
                     })}
                 </ul>
             </div>

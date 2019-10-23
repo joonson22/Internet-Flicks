@@ -2,8 +2,8 @@ class Api::MylistsController < ApplicationController
     def index
         @user = current_user.id
         @mylists = Mylist.all.to_a
-        
-        #@mylists.filter(mylist => mylist.user_id === @user)
+       
+        @mylists.select {|mylist| mylist.id === @user}
         
     end
 

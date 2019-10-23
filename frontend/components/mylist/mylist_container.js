@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchMovies } from '../../actions/movie_actions';
-import { fetchMylist } from '../../actions/mylist_actions'
+import { fetchMylist, deleteMylist } from '../../actions/mylist_actions';
 import Mylist from './mylist'
 
 const msp = state => {
@@ -15,7 +15,8 @@ const msp = state => {
 const mdp = dispatch => {
     return({
         fetchMovies: () => dispatch(fetchMovies()),
-        fetchMylist: () => dispatch(fetchMylist())
+        fetchMylist: () => dispatch(fetchMylist()),
+        deleteMylist: (id) => dispatch(deleteMylist(id))
     })
 }
 
