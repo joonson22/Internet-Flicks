@@ -33,9 +33,9 @@ class Mylist extends React.Component {
                     <h1 className='mylist-message'>No saved movies, add movies to watch later!</h1>
                 ) : (
                     <ul>
-                        {this.props.mylists.map(mylist => {
+                        {this.props.mylists.map((mylist,i) => {
                             let movie = this.props.movies[mylist.movie_id]
-                            return <MylistItem movie={movie} mylistId={mylist.id} deleteMylist={this.props.deleteMylist} fetchMylist={this.props.fetchMylist}/>
+                            return <MylistItem movie={movie} mylistId={mylist.id} deleteMylist={this.props.deleteMylist} fetchMylist={this.props.fetchMylist} key={i}/>
                         })}             
                     </ul>
                 )}
