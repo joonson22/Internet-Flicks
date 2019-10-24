@@ -13,6 +13,7 @@ class MylistItem extends React.Component {
     }
 
     handleDelete() {
+        // debugger
         this.props.deleteMylist(this.props.mylistId)
             .then(() => {
                 // debugger
@@ -34,6 +35,7 @@ class MylistItem extends React.Component {
     }
 
     render(){
+        
         return (
             <div onMouseLeave={this.handleLeave} className='search-item'>
                 {this.state.flag ? (

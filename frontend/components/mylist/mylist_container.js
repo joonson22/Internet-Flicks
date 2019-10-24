@@ -8,7 +8,7 @@ const msp = state => {
     return({
         user: state.entities.users[state.session.id],
         mylists: Object.values(state.entities.mylist),
-        movies: Object.values(state.entities.movies)
+        movies: state.entities.movies
     })
 }
 

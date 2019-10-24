@@ -18,31 +18,22 @@ class Mylist extends React.Component {
     
     render() {
         // debugger
-        if (!this.props.mylists) {
+        if (this.props.mylists.length === 0) {
             return null
         }
 
-        if (!this.props.movies) {
+        if (Object.keys(this.props.movies).length === 0) {
             return null
         }
-
-        let movies = this.props.movies.filter(movie => {
-            for(let i = 0; i < this.props.mylists.length; i++) {
-                if (this.props.mylists[i].movie_id === movie.id) {
-                    return movie;
-                }
-            }
-        })
         
         return(
             <div>
                 <ul>
-                    {movies.map((movie,i) => {
-                        let mylistId = this.props.mylists[i].id
-                        return <li>
-                                <MylistItem movie={movie} deleteMylist={this.props.deleteMylist} mylistId={mylistId} fetchMylist={this.props.fetchMylist}/>
-                            </li>
+                    {this.props.mylists.map(mylist => {
+                        let movie = this.props.movies[mylist.movie_id]
+                        return <MylistItem movie={movie} mylistId={mylist.id} deleteMylist={this.props.deleteMylist} fetchMylist={this.props.fetchMylist}/>
                     })}
+                    
                 </ul>
             </div>
         )
