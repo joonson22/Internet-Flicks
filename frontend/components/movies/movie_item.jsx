@@ -10,6 +10,7 @@ class MovieItem extends React.Component {
         
         }
         this.handleEnter = this.handleEnter.bind(this)
+        this.handleClick = this.handleClick.bind(this)
         // this.handleLeave - this.handleLeave.bind(this)
       
     }
@@ -26,6 +27,16 @@ class MovieItem extends React.Component {
         })
     }
 
+    handleClick() {
+        this.props.openPopout();
+        // debugger
+        if (this.props.movie.genre === 'Action') {
+            // debugger
+            this.props.setPopout(1)
+        } else if (this.props.movie.genre === 'Comedy') {
+            this.props.setPopout(2)
+        }
+    }
  
    
     render() {
@@ -42,7 +53,7 @@ class MovieItem extends React.Component {
                                <source src={this.props.movie.videoUrl} type='video/mp4'/>
                            </video> */}
                                 <Link to={`/movies/${this.props.movie.id}`}>
-                                    <button onClick={this.props.openPopout} className='popout-btn'>
+                                    <button onClick={this.handleClick} className='popout-btn'>
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </button>
                                 </Link>

@@ -29,7 +29,6 @@ class MovieItemPopout extends React.Component {
     }
 
     handleDelete() {
-    // debugger
     this.props.deleteMylist(this.mylistId)
         .then(() => {
             this.props.fetchMylist()
