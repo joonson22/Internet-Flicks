@@ -4,14 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 class MovieItemPopout extends React.Component {
     constructor(props) {
         super(props);
-        this.handleMylist = this.handleMylist.bind(this);
+        this.handleMylist = this.handleMylist.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
+        this.mylistId = null;
     }
     componentDidMount() {
         this.props.fetchMovie(this.props.moviePopoutId)
+        this.props.fetchMylist();
     }
 
     handleMylist() {
@@ -23,18 +27,37 @@ class MovieItemPopout extends React.Component {
         }
         this.props.createMylist(mylist);
     }
+
+    handleDelete() {
+    // debugger
+    this.props.deleteMylist(this.mylistId)
+        .then(() => {
+            this.props.fetchMylist()
+        })
+    }
     render() {
         if (!this.props.movie) {
             return null;
         }
-    
+        
+        if (this.props.mylists.length === 0) {
+            return null;
+        }
+        let exist = this.props.mylists.find(x => x.movie_id === this.props.movie.id)
+        if (exist) {
+            this.mylistId = exist.id
+        }
+
         return(
             <div className='movie-popout'>
                 <div className='popout-bg'>
                     <div className='popout-left'>
                         <h1>{this.props.movie.title}</h1>
-                        <h3 className='rating-year'>{this.props.movie.rating} {this.props.movie.year}</h3>
-                        <h3 className='green-text'>Over 9000% Match</h3>
+                        <div className='popoutSubtext'>
+                            <h3 className='rating'>{this.props.movie.rating} </h3>
+                            <h3 className='year'>{this.props.movie.year}</h3>
+                            <h3 className='green-text'>Over 9000% Match</h3>
+                        </div>
                         <h2>{this.props.movie.body}</h2>
                         <Link to={`/movie/${this.props.movie.id}`}>
                             <button className='popout-play-btn'>
@@ -43,12 +66,23 @@ class MovieItemPopout extends React.Component {
                             </button>
                         </Link>
 
-                        <Link to='#'>
+                        {exist ? (
+                            <button onClick={this.handleDelete} className='popout-mylist-btn'>
+                                <FontAwesomeIcon icon={faMinus} />
+                                My List
+                            </button>
+                        ) : (
+                                <button onClick={this.handleMylist} className='popout-mylist-btn'>
+                                    <FontAwesomeIcon icon={faPlus} />
+                                    My List
+                                </button>
+                            )}
+                        {/* <Link to='#'>
                             <button className='popout-mylist-btn' onClick={this.handleMylist}>
                                 <FontAwesomeIcon icon={faPlus} />
                                 My list
                             </button>
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className='popout-right'>
                         <video autoPlay='autoPlay' className='popout-video'>

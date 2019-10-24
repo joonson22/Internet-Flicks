@@ -2,7 +2,7 @@ import MovieItemPopout from './movie_item_popout';
 import { connect } from 'react-redux';
 import { closePopout} from '../../actions/popout_actions'
 import {fetchMovie} from '../../actions/movie_actions'
-import { createMylist} from '../../actions/mylist_actions';
+import { createMylist, fetchMylist, deleteMylist } from '../../actions/mylist_actions';
 
 const msp = (state, ownProps) => {
    
@@ -10,7 +10,8 @@ const msp = (state, ownProps) => {
         boolean: state.ui.popout,
         movie: state.entities.movies[ownProps.movieId],
         moviePopoutId: ownProps.movieId,
-        user: state.session
+        user: state.session,
+        mylists: Object.values(state.entities.mylist)
     })
 }
 
@@ -18,7 +19,9 @@ const mdp = dispatch => {
     return({
         closePopout: () => dispatch(closePopout()),
         fetchMovie: (id) => dispatch(fetchMovie(id)),
-        createMylist: (mylist) => dispatch(createMylist(mylist))
+        createMylist: (mylist) => dispatch(createMylist(mylist)),
+        fetchMylist: () => dispatch(fetchMylist()),
+        deleteMylist: (id) => dispatch(deleteMylist(id)),
     })
 }
 

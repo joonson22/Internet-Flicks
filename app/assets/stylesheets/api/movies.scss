@@ -183,12 +183,12 @@
 
 
 
-
 .popout-left {
     background: black;
     width: 40%;
     position: relative;
 }
+
 
 .popout-left h1 {
     font-size: 240%;
@@ -199,16 +199,29 @@
     margin-left: 13%;
 }
 
-.rating-year{
+.popoutSubtext {
+    display: flex;
+    // justify-content: space-evenly;
+    margin-left: 13%;
+}
+
+.rating{
     font-size: 85%;
-    margin-left: 40%;
+    margin-right: 1%;
+    // margin-left: 40%;
+}
+.year{
+    font-size: 85%;
+    margin-right: 2%;
+    // margin-right: auto;
+    // margin-left: 40%;
 }
 
 .green-text {
     color: rgb(4, 190, 4);
-    position: absolute;
-    top: 20.7%;
-    left: 13%;
+    // position: absolute;
+    // top: 20.7%;
+    // left: 13%;
     font-size: 85%;
 }
 
