@@ -13,6 +13,7 @@ class SearchIndex extends React.Component {
     componentDidMount(){
         this.props.showNavbar();
         this.props.fetchMovies();
+        this.props.fetchMylist();
     }
 
     handleEnter() {
@@ -33,6 +34,11 @@ class SearchIndex extends React.Component {
         if (this.props.movies.length === 0) {
             return null;
         }
+
+        if (this.props.mylists.length === 0) {
+            return null;
+        }
+        
         let filteredMovies = this.props.movies.filter(movie => {
             return movie.title.toLowerCase().includes(this.props.search.toLowerCase()) || movie.genre.toLowerCase() === this.props.search.toLowerCase()
         })
@@ -41,10 +47,10 @@ class SearchIndex extends React.Component {
             <div className='search-index-container'>
                 <ul>
                     {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId}/>
+                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
                     })}
                     {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId}/>
+                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
                     })}
                 </ul>
              

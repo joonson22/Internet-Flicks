@@ -2,17 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 class SearchItem extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             flag: true,
-        
         }
+        this.mylistId = null;
         this.handleEnter = this.handleEnter.bind(this)
         this.handleLeave = this.handleLeave.bind(this)
         this.handleMylist = this.handleMylist.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     handleMylist() {
@@ -23,6 +25,15 @@ class SearchItem extends React.Component {
             }
         }
         this.props.createMylist(mylist);
+    }
+
+    handleDelete() {
+        // debugger
+        this.props.deleteMylist(this.mylistId)
+            .then(() => {
+                this.props.fetchMylist()
+            })
+
     }
 
     handleEnter() {
@@ -40,6 +51,10 @@ class SearchItem extends React.Component {
  
    
     render() {
+        let exist = this.props.mylists.find(x => x.movie_id === this.props.movie.id)
+        if (exist) {
+            this.mylistId = exist.id
+        }
         return(
             <div onMouseLeave={this.handleLeave} className='search-item'>
                 {this.state.flag ? (
@@ -54,9 +69,15 @@ class SearchItem extends React.Component {
                                 <FontAwesomeIcon icon={faPlay} />
                             </button>
                         </Link>
-                        <button onClick={this.handleMylist} className='search-plus-btn'>
-                            <FontAwesomeIcon icon={faPlus} />
-                        </button>
+                        {exist ? (
+                            <button onClick={this.handleDelete} className='search-plus-btn'>
+                                <FontAwesomeIcon icon={faMinus} />
+                            </button>
+                        ) : (
+                            <button onClick={this.handleMylist} className='search-plus-btn'>
+                                <FontAwesomeIcon icon={faPlus} />
+                            </button>
+                        )}
                     </div>
                 )}
             </div>
