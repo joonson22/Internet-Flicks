@@ -47,7 +47,7 @@ class Movies extends React.Component {
         }
 
         
-        let indexMovie = this.props.movies.filter(movie => movie.title === 'The Matrix')
+        let indexMovie = this.props.movies.filter(movie => movie.title === 'GodFather')
         this.indexId = indexMovie[0].id
         let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
         let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
@@ -60,11 +60,13 @@ class Movies extends React.Component {
         return(
             <div className='movie-container'>
                 <div className='index-movie-container'>
-                    <video className='index-movie' controls autoPlay='autoPlay'   >
+                    <img src={indexMovie[0].photoUrl} className='index-movie' alt="The Godfather" />  
+                    {/* <video className='index-movie' controls autoPlay='autoPlay'   >
                         <source src={indexMovie[0].videoUrl} type='video/mp4' />
-                    </video> 
+                    </video>  */}
                     <div className='index-movie-content'>
                         <h1>{indexMovie[0].title}</h1>
+                        <p>{indexMovie[0].body}</p>
                         <Link to={`/movie/${indexMovie[0].id}`}>
                             <button className='index-play-btn'>
                                 <FontAwesomeIcon icon={faPlay} />

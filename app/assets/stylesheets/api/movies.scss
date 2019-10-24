@@ -295,9 +295,6 @@
     position: absolute;
 }
 
-.show-container {
-    
-}
 
 .show-movie {
     width: 100vw;
@@ -314,6 +311,11 @@
     top: 20%;
     left: 2%;
 }
+.index-movie-container p {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+}
 
 .index-play-btn {
     background-color: rgba(128, 128, 128, 0.2);
@@ -323,7 +325,7 @@
     text-decoration: none;
     border-radius: 15px;
     position: absolute;
-    top: 40%; 
+    top: 50%; 
     left: 2%;
     border-color: transparent;
 }
@@ -341,7 +343,7 @@
     border-radius: 15px;
     border-color: transparent;
     position: absolute;
-    top: 40%; 
+    top: 50%; 
     left: 9%;
 }
 
