@@ -6,13 +6,24 @@
 
     .nav-right {
         display: flex;
+        align-items: center;
         color: white;
+        justify-content: flex-end;
         h1 {
-            width: 13vw;
+            width: 15vw;
             font-size: 135%;
             margin-bottom: 0%;
-            margin-top: 1%
+            margin-top: 1%;
+            
         }
+        .nav-bar-mylist {
+            color: white;
+            margin-right: 3%;
+            margin-left: 3%;
+            text-decoration: none;
+            font-size: 120%;
+        }
+
         .nav-logout{
             background-color: #E50914;
             color: white;
@@ -35,6 +46,20 @@
             background-color: rgb(255, 0, 0);
             box-shadow: 0 3px #666;
             transform: translateY(3px);
+        }
+        
+
+        .search-bar-container {
+            display: flex;
+
+            .search-bar-input {
+                height: 25px;
+                border-width: 0px;
+            }
+            
+            .search-icon {
+                border-color: white;
+            }
         }
     }
 

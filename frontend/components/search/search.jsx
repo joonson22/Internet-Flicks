@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 class Search extends React.Component {
     constructor(props) {
@@ -13,6 +15,7 @@ class Search extends React.Component {
         e.preventDefault();
         this.props.updateSearch(this.state.query)
         this.props.history.push('/search')
+        
     }
 
     update(e) {
@@ -25,9 +28,11 @@ class Search extends React.Component {
         
         return(
             <div>
-                <form action="" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder='Title, genre...' onChange={this.update('query')} value={this.state.query}/>
-                    <input type="submit" value='Submit'/>
+                <form action="" onSubmit={this.handleSubmit} className='search-bar-container'>
+                    <input type="text" className='search-bar-input' placeholder='Title, genre...' onChange={this.update('query')} value={this.state.query} />
+                    <button className='search-icon'>
+                        <FontAwesomeIcon icon={faSearch} className='search-icon'/>
+                    </button>
                 </form>
             </div>
         )
