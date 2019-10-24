@@ -18,9 +18,9 @@ class Mylist extends React.Component {
     
     render() {
         // debugger
-        if (this.props.mylists.length === 0) {
-            return null
-        }
+        // if (this.props.mylists.length === 0) {
+        //     return null
+        // }
 
         if (Object.keys(this.props.movies).length === 0) {
             return null
@@ -28,13 +28,17 @@ class Mylist extends React.Component {
         
         return(
             <div className='mylist-container'>
-                <ul>
-                    {this.props.mylists.map(mylist => {
-                        let movie = this.props.movies[mylist.movie_id]
-                        return <MylistItem movie={movie} mylistId={mylist.id} deleteMylist={this.props.deleteMylist} fetchMylist={this.props.fetchMylist}/>
-                    })}
-                    
-                </ul>
+
+                {this.props.mylists.length === 0 ? (
+                    <h1 className='mylist-message'>No saved movies, add movies to watch later!</h1>
+                ) : (
+                    <ul>
+                        {this.props.mylists.map(mylist => {
+                            let movie = this.props.movies[mylist.movie_id]
+                            return <MylistItem movie={movie} mylistId={mylist.id} deleteMylist={this.props.deleteMylist} fetchMylist={this.props.fetchMylist}/>
+                        })}             
+                    </ul>
+                )}
             </div>
         )
     }

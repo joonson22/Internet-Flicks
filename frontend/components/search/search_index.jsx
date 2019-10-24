@@ -30,7 +30,7 @@ class SearchIndex extends React.Component {
 
 
     render() {
-        debugger
+        // debugger
         if (this.props.movies.length === 0) {
             return null;
         }
@@ -45,14 +45,18 @@ class SearchIndex extends React.Component {
 
         return(
             <div className='search-index-container'>
-                <ul>
-                    {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
-                    })}
-                    {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
-                    })}
-                </ul>
+                {filteredMovies.length === 0 ? (
+                    <h1 className='search-message'>No result matches your criteria, please search again.</h1>
+                ) : (
+                    <ul>
+                        {filteredMovies.map(movie => {
+                            return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
+                        })}
+                        {filteredMovies.map(movie => {
+                            return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId} fetchMylist={this.props.fetchMylist} deleteMylist={this.props.deleteMylist} mylists={this.props.mylists}/>
+                        })}
+                    </ul>
+                )}
              
             </div>
         )
