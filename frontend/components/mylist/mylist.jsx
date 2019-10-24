@@ -27,7 +27,7 @@ class Mylist extends React.Component {
         }
         
         return(
-            <div>
+            <div className='mylist-container'>
                 <ul>
                     {this.props.mylists.map(mylist => {
                         let movie = this.props.movies[mylist.movie_id]

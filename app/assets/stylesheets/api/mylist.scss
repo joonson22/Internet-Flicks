@@ -1,0 +1,22 @@
+.mylist-container {
+    width: 100vw;
+    height: 100vh;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+       
+        .mylist-item {
+            margin: 1% 1%;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+           
+            .search-movie {
+                
+            }
+        }
+    }
+}

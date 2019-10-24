@@ -34,7 +34,7 @@ class SearchIndex extends React.Component {
             return null;
         }
         let filteredMovies = this.props.movies.filter(movie => {
-            return movie.title.toLowerCase() === this.props.search.toLowerCase() || movie.genre.toLowerCase() === this.props.search.toLowerCase()
+            return movie.title.toLowerCase().includes(this.props.search.toLowerCase()) || movie.genre.toLowerCase() === this.props.search.toLowerCase()
         })
 
         return(

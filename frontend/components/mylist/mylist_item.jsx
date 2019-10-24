@@ -37,7 +37,7 @@ class MylistItem extends React.Component {
     render(){
         
         return (
-            <div onMouseLeave={this.handleLeave} className='search-item'>
+            <div onMouseLeave={this.handleLeave} className='mylist-item'>
                 {this.state.flag ? (
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter} />
                 ) : (
