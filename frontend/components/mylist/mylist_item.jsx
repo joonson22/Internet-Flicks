@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 class MylistItem extends React.Component {
     constructor(props){
@@ -40,12 +44,23 @@ class MylistItem extends React.Component {
             <div onMouseLeave={this.handleLeave} className='mylist-item'>
                 {this.state.flag ? (
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter} />
-                ) : (
-                        <video width='295' height='166' controls onMouseEnter={this.handleEnter}>
-                            <source src={this.props.movie.videoUrl} type='video/mp4' />
-                        </video>
+                    ) : (
+                        <div>
+                            <video width='295' height='166' controls onMouseEnter={this.handleEnter}>
+                                <source src={this.props.movie.videoUrl} type='video/mp4' />
+                            </video>
+                            <Link to={`/movie/${this.props.movie.id}`}>
+                                <button className='mylist-play-btn'>
+                                    <FontAwesomeIcon icon={faPlay} />
+                                </button>
+                            </Link>
+                            <button onClick={this.handleDelete} className='mylist-minus-btn'>
+                                <FontAwesomeIcon icon={faMinus} />
+                            </button>
+                        </div>
                     )}
-                    <button onClick={this.handleDelete}>Delete</button>
+               
+                 
             </div>
         )
     }

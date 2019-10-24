@@ -7,16 +7,43 @@
         width: 100%;
        
         .mylist-item {
+            position: relative;
             margin: 1% 1%;
 
             &:hover {
                 transform: scale(1.2);
             }
 
-           
-            .search-movie {
-                
-            }
+           .mylist-play-btn {
+               position: absolute;
+               left: 0%;
+               top: 35%;
+
+               font-size: 110%;
+               color: grey;
+               background-color: transparent;
+               border: none;
+
+               &:hover {
+                   color: red;
+               }
+           }
+
+           .mylist-minus-btn {
+               position: absolute;
+               right: 0%;
+               top: 35%;
+
+               font-size: 110%;
+               color: grey;
+               background-color: transparent;
+               border: none;
+
+               &:hover {
+                   color: red;
+               }
+           }
+            
         }
     }
 }
