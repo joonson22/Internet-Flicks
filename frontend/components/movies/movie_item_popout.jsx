@@ -40,9 +40,10 @@ class MovieItemPopout extends React.Component {
             return null;
         }
         
-        if (this.props.mylists.length === 0) {
-            return null;
-        }
+        // if (this.props.mylists.length === 0) {
+        //     return null;
+        // }
+        
         let exist = this.props.mylists.find(x => x.movie_id === this.props.movie.id)
         if (exist) {
             this.mylistId = exist.id

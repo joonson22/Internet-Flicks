@@ -30,14 +30,14 @@ class SearchIndex extends React.Component {
 
 
     render() {
-        // debugger
+        debugger
         if (this.props.movies.length === 0) {
             return null;
         }
 
-        if (this.props.mylists.length === 0) {
-            return null;
-        }
+        // if (this.props.mylists.length === 0) {
+        //     return null;
+        // }
         
         let filteredMovies = this.props.movies.filter(movie => {
             return movie.title.toLowerCase().includes(this.props.search.toLowerCase()) || movie.genre.toLowerCase() === this.props.search.toLowerCase()
