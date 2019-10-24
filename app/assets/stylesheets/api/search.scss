@@ -14,9 +14,35 @@
             }
 
            
-            .search-movie {
-                
-            }
+           .search-play-btn {
+               position: absolute;
+               left: 0%;
+               top: 35%;
+
+               font-size: 110%;
+               color: grey;
+               background-color: transparent;
+               border: none;
+
+               &:hover {
+                   color: red;
+               }
+           }
+
+           .search-plus-btn {
+               position: absolute;
+               right: 0%;
+               top: 35%;
+
+               font-size: 110%;
+               color: grey;
+               background-color: transparent;
+               border: none;
+
+               &:hover {
+                   color: red;
+               }
+           }
         }
     }
 }

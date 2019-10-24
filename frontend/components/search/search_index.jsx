@@ -41,10 +41,10 @@ class SearchIndex extends React.Component {
             <div className='search-index-container'>
                 <ul>
                     {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie}/>
+                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId}/>
                     })}
                     {filteredMovies.map(movie => {
-                        return <SearchItem movie={movie}/>
+                        return <SearchItem movie={movie} createMylist={this.props.createMylist} userId={this.props.userId}/>
                     })}
                 </ul>
              
