@@ -19,8 +19,8 @@ class NavBar extends React.Component {
                    </Link>
                     {this.props.user ? (
                         <div className="nav-right">
-                            <SearchContainer />
                             <Link to='/mylist' className='nav-bar-mylist'>Mylist</Link>
+                            <SearchContainer />
                             <h1>Welcome {this.props.user.username}</h1>
                             <button onClick={this.props.logout} className='nav-logout'>Logout</button>
                         </div>
