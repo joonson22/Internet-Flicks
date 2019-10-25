@@ -285,6 +285,20 @@
     position: relative;
 }
 
+.mute-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 120%;
+}
+
+.mute2-btn {
+    background-color: transparent;
+    color: grey;
+    border: none;
+    font-size: 120%;
+}
+
 .popout-video {
     width: 66vw;
     height: 62vh;

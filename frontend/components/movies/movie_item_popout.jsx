@@ -5,13 +5,16 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 class MovieItemPopout extends React.Component {
     constructor(props) {
         super(props);
-        this.handleMylist = this.handleMylist.bind(this)
-        this.handleDelete = this.handleDelete.bind(this)
+        this.handleMylist = this.handleMylist.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
         this.mylistId = null;
+        this.handleMute = this.handleMute.bind(this);
     }
     componentDidMount() {
         this.props.fetchMovie(this.props.moviePopoutId)
@@ -34,11 +37,26 @@ class MovieItemPopout extends React.Component {
             this.props.fetchMylist()
         })
     }
+
+    handleMute() {
+        let vid = document.querySelector('.popout-video')
+        let mute = document.querySelector('.mute-btn')
+        let mute2 = document.querySelector('.mute2-btn')
+        if (vid.muted) {
+            vid.muted = false;
+            mute2.classList.remove('mute2-btn')
+            mute2.className += " " + 'mute-btn'
+        } else {
+            vid.muted = true;
+            mute.classList.remove('mute-btn')
+            mute.className += " " + 'mute2-btn'
+        }
+    }
     render() {
         if (!this.props.movie) {
             return null;
         }
-        
+       
         // if (this.props.mylists.length === 0) {
         //     return null;
         // }
@@ -47,7 +65,7 @@ class MovieItemPopout extends React.Component {
         if (exist) {
             this.mylistId = exist.id
         }
-
+    
         return(
             <div className='movie-popout'>
                 <div className='popout-bg'>
@@ -91,6 +109,11 @@ class MovieItemPopout extends React.Component {
                         <button onClick={this.props.closePopout} className='popout-close'>
                             <FontAwesomeIcon icon={faTimes} />
                         </button>
+
+                        <button onClick={this.handleMute} className='mute-btn'>
+                            <FontAwesomeIcon icon={faVolumeMute} />
+                        </button>
+
                     </div>
                 </div>
             </div>
