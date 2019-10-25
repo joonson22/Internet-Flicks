@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
+
 class SearchItem extends React.Component {
     constructor(props){
         super(props);
@@ -11,10 +13,11 @@ class SearchItem extends React.Component {
             flag: true,
         }
         this.mylistId = null;
-        this.handleEnter = this.handleEnter.bind(this)
-        this.handleLeave = this.handleLeave.bind(this)
-        this.handleMylist = this.handleMylist.bind(this)
-        this.handleDelete = this.handleDelete.bind(this)
+        this.handleEnter = this.handleEnter.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
+        this.handleMylist = this.handleMylist.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleMute = this.handleMute.bind(this);
     }
 
     handleMylist() {
@@ -48,6 +51,21 @@ class SearchItem extends React.Component {
         })
     }
 
+    handleMute() {
+        let vid = document.querySelector('.search-video')
+        let mute = document.querySelector('.search-mute-btn')
+        let mute2 = document.querySelector('.search-mute2-btn')
+        if (vid.muted) {
+            vid.muted = false;
+            mute2.classList.remove('search-mute2-btn')
+            mute2.className += " " + 'search-mute-btn'
+        } else {
+            vid.muted = true;
+            mute.classList.remove('search-mute-btn')
+            mute.className += " " + 'search-mute2-btn'
+        }
+    }
+
  
    
     render() {
@@ -61,7 +79,7 @@ class SearchItem extends React.Component {
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter} />
                 ) : (
                     <div>
-                        <video width='295' height='166' controls onMouseEnter={this.handleEnter}>
+                        <video width='295' height='166' controls onMouseEnter={this.handleEnter} className='search-video'>
                             <source src={this.props.movie.videoUrl} type='video/mp4' />
                         </video>
                         <Link to={`/movie/${this.props.movie.id}`}>
@@ -78,6 +96,9 @@ class SearchItem extends React.Component {
                                 <FontAwesomeIcon icon={faPlus} />
                             </button>
                         )}
+                        <button onClick={this.handleMute} className='search-mute-btn'>
+                            <FontAwesomeIcon icon={faVolumeMute} />
+                        </button>
                     </div>
                 )}
             </div>

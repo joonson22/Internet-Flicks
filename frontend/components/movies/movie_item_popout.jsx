@@ -6,7 +6,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
-import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+// import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 class MovieItemPopout extends React.Component {
     constructor(props) {
@@ -40,16 +40,16 @@ class MovieItemPopout extends React.Component {
 
     handleMute() {
         let vid = document.querySelector('.popout-video')
-        let mute = document.querySelector('.mute-btn')
-        let mute2 = document.querySelector('.mute2-btn')
+        let mute = document.querySelector('.popout-mute-btn')
+        let mute2 = document.querySelector('.popout-mute2-btn')
         if (vid.muted) {
             vid.muted = false;
-            mute2.classList.remove('mute2-btn')
-            mute2.className += " " + 'mute-btn'
+            mute2.classList.remove('popout-mute2-btn')
+            mute2.className += " " + 'popout-mute-btn'
         } else {
             vid.muted = true;
-            mute.classList.remove('mute-btn')
-            mute.className += " " + 'mute2-btn'
+            mute.classList.remove('popout-mute-btn')
+            mute.className += " " + 'popout-mute2-btn'
         }
     }
     render() {
@@ -110,7 +110,7 @@ class MovieItemPopout extends React.Component {
                             <FontAwesomeIcon icon={faTimes} />
                         </button>
 
-                        <button onClick={this.handleMute} className='mute-btn'>
+                        <button onClick={this.handleMute} className='popout-mute-btn'>
                             <FontAwesomeIcon icon={faVolumeMute} />
                         </button>
 

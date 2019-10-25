@@ -285,16 +285,16 @@
     position: relative;
 }
 
-.mute-btn {
+.popout-mute-btn {
     background-color: transparent;
-    color: white;
     border: none;
     font-size: 120%;
+    color: grey;
 }
 
-.mute2-btn {
+.popout-mute2-btn {
+    color: white;
     background-color: transparent;
-    color: grey;
     border: none;
     font-size: 120%;
 }
