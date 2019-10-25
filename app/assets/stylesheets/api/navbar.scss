@@ -19,15 +19,42 @@
         }
         .nav-bar-mylist {
             color: white;
+            margin-right: 2%;
+            margin-left: 2%;
+            text-decoration: none;
+            font-size: 120%;
+        }
+        
+        .nav-bar-mylist:hover {
+            color: rgb(155, 155, 155);
+        }
+
+        .nav-anchors {
+            margin: 0 2%;
+        }
+        
+        .nav-bar-linkedin {
+            color: white;
             margin-right: 3%;
             margin-left: 3%;
             text-decoration: none;
             font-size: 120%;
-
+        }
+        
+        .nav-bar-linkedin:hover {
+            color: #2867B2
         }
 
-        .nav-bar-mylist:hover {
-            color: rgb(155, 155, 155);
+        .nav-bar-github {
+            color: white;
+            margin-right: 3%;
+            margin-left: 3%;
+            text-decoration: none;
+            font-size: 120%;
+        }
+        
+        .nav-bar-github:hover {
+            color: rgb(252, 175, 32);
         }
 
         .nav-logout{

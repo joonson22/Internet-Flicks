@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 class NavBar extends React.Component {
 
@@ -19,6 +21,14 @@ class NavBar extends React.Component {
                    </Link>
                     {this.props.user ? (
                         <div className="nav-right">
+                            <a href="https://www.linkedin.com/in/jdlai/" className='nav-anchors'>
+                                <FontAwesomeIcon icon={faLinkedinIn} className='nav-bar-linkedin'/>
+                            </a>
+
+                            <a href="https://github.com/joonson22" className='nav-anchors'>
+                                <FontAwesomeIcon icon={faGithub} className='nav-bar-github'/>
+                            </a>
+                            <Link to='/movies' className='nav-bar-mylist'>Movies</Link>
                             <Link to='/mylist' className='nav-bar-mylist'>Mylist</Link>
                             <SearchContainer />
                             <h1>Welcome {this.props.user.username}</h1>
