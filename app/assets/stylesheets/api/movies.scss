@@ -6,8 +6,9 @@
     h1 {
         color: white;
     }
-   //------------------Comedy Container------------------------- 
-    .comedy-container {
+
+   //------------------Genre Containers------------------------- 
+    .genre-container {
         display: flex;
         flex-direction: column;
         margin-bottom: 2%;
@@ -26,7 +27,7 @@
             }
         }
     
-        .comedy-movies {
+        .genre-movies {
             color: white;
             // border-color: red;
             // border-style: solid;
@@ -75,88 +76,10 @@
                     border: none;
                     font-size: 250%;
                     
-                }
-
-                
-               
-                
+                }    
             }
-    
         }
-    }
-    //------------------ACTION Container------------------------- 
-    .action-container {
-        display: flex;
-        flex-direction: column;
-        // border-color: red;
-        // border-style: solid;
-        margin-bottom: 2%;
-    
-        .genre-title {
-            color: white;
-            font-size: 75%;
-            margin-bottom: 0;
-
-            h1 {
-                margin-bottom: 0;
-            }
-            // border-color: red;
-            // border-style: solid;
-        }
-    
-        .action-movies {
-            color: white;
-            // border-color: red;
-            // border-style: solid;
-            display: flex;
-            padding: 0;
-            align-items: center;
-            
-            &:hover {
-                .movie-item {
-                transform: translateX(-14%);
-                }
-            }
-            
-    
-            .movie-item {
-                color: white;
-                // border-color: red;
-                // border-style: solid;
-                // position: relative;
-                text-decoration: none;
-                list-style: none;
-                // flex: 0 0 19.7%;
-                text-align: center;
-                margin: 0 2px;
-                transition: transform 300ms ease 100ms;
-
-                
-                &:hover {
-                    transform: scale(1.2) !important;
-                }
-                &:hover ~ .movie-item {
-                    transform: translateX(14%);
-                }
-
-                link {
-                    font-size: 100px;
-                }
-
-                .popout-btn {
-                    position: absolute;
-                    top: 83%;
-                    right: 43%;
-                    background-color: transparent;
-                    color: white;
-                    border: none;
-                    font-size: 250%;
-                    
-                }
-            }
-    
-        }
-    }
+    } 
 }
 
    //------------------Popout Container------------------------- 

@@ -50,7 +50,7 @@ class MovieItemPopout extends React.Component {
             vid.muted = true;
             mute.classList.remove('popout-mute-btn')
             mute.className += " " + 'popout-mute2-btn'
-        }
+        } 
     }
     render() {
         if (!this.props.movie) {
