@@ -47,7 +47,7 @@ class SearchIndex extends React.Component {
             <div className='search-index-container'>
                 <h1 className='search-word'>{this.props.search}</h1>
                 {filteredMovies.length === 0 ? (
-                    <h1 className='search-message'>No result matches your criteria, please search again.</h1>
+                    <h2 className='search-message'>No result matches your criteria, please search again.</h2>
                 ) : (
                     <ul>
                         {filteredMovies.map((movie,i) => {
