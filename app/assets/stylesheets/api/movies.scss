@@ -159,6 +159,7 @@
     }
 }
 
+   //------------------Popout Container------------------------- 
 .movie-popout {
     margin-top: 0;
     position: relative;
@@ -315,13 +316,7 @@
     position: absolute;
 }
 
-
-.show-movie {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-
+   //------------------Index Movie Container------------------------- 
 .index-movie-container {
     position: relative;
 }
@@ -375,9 +370,14 @@
 .index-movie {
     width: 100vw;
     height: 80vh;
-   
+    
 }
-
+//------------------Show Container------------------------- 
+.show-movie {
+ width: 100vw;
+ height: 100vh;
+ position: relative;
+}
 
 .show-pg-index-link {
     font-size: 150%;
@@ -385,45 +385,19 @@
     top: 10%;
     left: 5%;
     color: white;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 2s;
     text-decoration: none;
 }
 
-// .comedy-container {
-//     display: flex;
-//     flex-direction: column;
-//     border-color: red;
-//     border-style: solid;
-// }
+.show-pg-index-link:hover {
+   
+    opacity: 1;
+    transition-delay: 0.01s;
+    
+}
 
-// .comedy-movies {
-//         color: white;
-//         border-color: red;
-//         border-style: solid;
-//         display: flex;
-// }
 
-// .comedy-movies:hover .movie-item {
-//     transform: translateX(-25%);
-// }
-
-// .movie-item {
-//     color: white;
-//     border-color: red;
-//     border-style: solid;
-//     text-decoration: none;
-//     list-style: none;
-//     flex: 0 0 19.7%;
-//     text-align: center;
-//     margin: 0 2px;
-//     transition: transform 300ms ease 100ms;
-// }
-
-// .movie-item:hover {
-//     transform: scale(1.5) !important;
-// }
-
-// .movie-item:hover ~ .movie-item {
-//     transform: translateX(25%);
-// }
 
 

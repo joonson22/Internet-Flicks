@@ -20,7 +20,7 @@ class MovieShow extends React.Component {
                 </video> 
                 <Link to='/movies' className='show-pg-index-link'>
                     <FontAwesomeIcon icon={faArrowLeft} />
-                    Back to Browse
+                          Back to Browse
                 </Link>
                 
             </div>
