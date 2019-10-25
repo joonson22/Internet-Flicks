@@ -63,7 +63,7 @@ class MylistItem extends React.Component {
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter} />
                     ) : (
                         <div>
-                            <video width='295' height='166' controls onMouseEnter={this.handleEnter} className='mylist-video'>
+                            <video width='295' height='166' autoPlay muted onMouseEnter={this.handleEnter} className='mylist-video'>
                                 <source src={this.props.movie.videoUrl} type='video/mp4' />
                             </video>
                             <Link to={`/movie/${this.props.movie.id}`}>
@@ -74,7 +74,7 @@ class MylistItem extends React.Component {
                             <button onClick={this.handleDelete} className='mylist-minus-btn'>
                                 <FontAwesomeIcon icon={faMinus} />
                             </button>
-                            <button onClick={this.handleMute} className='mylist-mute-btn'>
+                            <button onClick={this.handleMute} className='mylist-mute2-btn'>
                                 <FontAwesomeIcon icon={faVolumeMute} />
                             </button>
                         </div>
