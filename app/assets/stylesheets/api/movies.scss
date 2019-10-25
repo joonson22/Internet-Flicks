@@ -286,6 +286,9 @@
 }
 
 .popout-mute-btn {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
     background-color: transparent;
     border: none;
     font-size: 120%;
@@ -293,6 +296,9 @@
 }
 
 .popout-mute2-btn {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
     color: white;
     background-color: transparent;
     border: none;

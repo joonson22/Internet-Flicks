@@ -79,9 +79,10 @@ class SearchItem extends React.Component {
                     <img src={this.props.movie.photoUrl} width='295' height='166' alt="" onMouseEnter={this.handleEnter} />
                 ) : (
                     <div>
-                        <video width='295' height='166' controls onMouseEnter={this.handleEnter} className='search-video'>
+                        <video width='295' height='166' autoPlay muted onMouseEnter={this.handleEnter} className='search-video'>
                             <source src={this.props.movie.videoUrl} type='video/mp4' />
                         </video>
+                           
                         <Link to={`/movie/${this.props.movie.id}`}>
                             <button className='search-play-btn'>
                                 <FontAwesomeIcon icon={faPlay} />
@@ -96,7 +97,7 @@ class SearchItem extends React.Component {
                                 <FontAwesomeIcon icon={faPlus} />
                             </button>
                         )}
-                        <button onClick={this.handleMute} className='search-mute-btn'>
+                        <button onClick={this.handleMute} className='search-mute2-btn'>
                             <FontAwesomeIcon icon={faVolumeMute} />
                         </button>
                     </div>

@@ -7,6 +7,7 @@
         width: 100%;
        
         .search-item {
+            position: relative;
             margin: 1% 1%;
 
             &:hover {
@@ -45,6 +46,9 @@
            }
 
             .search-mute-btn {
+                position: absolute;
+                right: 0%;
+                bottom: 3%;
                 background-color: transparent;
                 border: none;
                 font-size: 120%;
@@ -52,6 +56,9 @@
             }
             
             .search-mute2-btn {
+                position: absolute;
+                right: 0%;
+                bottom: 3%;
                 color: white;
                 background-color: transparent;
                 border: none;
