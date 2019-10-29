@@ -52,6 +52,9 @@ class Movies extends React.Component {
         let actionMovies = this.props.movies.filter(movie => movie.genre === 'Action')
         let comedyMovies = this.props.movies.filter(movie => movie.genre === 'Comedy')
         let horrorMovies = this.props.movies.filter(movie => movie.genre === 'Horror')
+        let fantasyMovies = this.props.movies.filter(movie => movie.genre === 'Fantasy')
+        let animationMovies = this.props.movies.filter(movie => movie.genre === 'Animation')
+        let animeMovies = this.props.movies.filter(movie => movie.genre === 'Anime')
 
         let exist = this.props.mylists.find(x => x.movie_id === this.indexId)
         if (exist) {
@@ -147,6 +150,72 @@ class Movies extends React.Component {
                     
                      </ul>
                     {this.props.boolean && this.props.popoutId === 3 ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
+                        </div>
+                     ) : (
+                         null
+                     )}
+                </div>
+
+                 <div className='genre-container'>
+                     <div className='genre-title'> 
+                        <h1>Fantasy</h1>
+                     </div>
+                     <ul className='genre-movies'>
+                        {fantasyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                        {fantasyMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                    
+                     </ul>
+                    {this.props.boolean && this.props.popoutId === 4 ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
+                        </div>
+                     ) : (
+                         null
+                     )}
+                </div>
+
+                 <div className='genre-container'>
+                     <div className='genre-title'> 
+                        <h1>Animation</h1>
+                     </div>
+                     <ul className='genre-movies'>
+                        {animationMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                        {animationMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                    
+                     </ul>
+                    {this.props.boolean && this.props.popoutId === 5 ? (
+                        <div className='movie-popout'>
+                            <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
+                        </div>
+                     ) : (
+                         null
+                     )}
+                </div>
+
+                 <div className='genre-container'>
+                     <div className='genre-title'> 
+                        <h1>Anime</h1>
+                     </div>
+                     <ul className='genre-movies'>
+                        {animeMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                        {animeMovies.map((movie, i) => {
+                            return <MovieItem movie={movie} key={i} openPopout={this.props.openPopout} popoutId={this.props.popoutId} setPopout={this.props.setPopout}/>
+                        })}
+                    
+                     </ul>
+                    {this.props.boolean && this.props.popoutId === 6 ? (
                         <div className='movie-popout'>
                             <MovieItemPopoutContainer movieId={this.props.match.params.movieId}/>
                         </div>

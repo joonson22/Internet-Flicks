@@ -54,6 +54,7 @@
                 text-align: center;
                 margin: 0 2px;
                 transition: transform 300ms ease 100ms;
+                
 
                 
                 &:hover {
@@ -119,7 +120,7 @@
     margin-left: 13%;
 }
 .popout-left h2 {
-    font-size: 160%;
+    font-size: 100%;
     margin-left: 13%;
 }
 
@@ -251,6 +252,7 @@
 }
 .index-movie-container p {
     position: absolute;
+    width: 20%;
     top: 35%;
     left: 2%;
 }
@@ -263,7 +265,7 @@
     text-decoration: none;
     border-radius: 15px;
     position: absolute;
-    top: 50%; 
+    top: 60%; 
     left: 2%;
     border-color: transparent;
 }
@@ -281,7 +283,7 @@
     border-radius: 15px;
     border-color: transparent;
     position: absolute;
-    top: 50%; 
+    top: 60%; 
     left: 9%;
 }
 
@@ -320,7 +322,4 @@
     transition-delay: 0.01s;
     
 }
-
-
-
 

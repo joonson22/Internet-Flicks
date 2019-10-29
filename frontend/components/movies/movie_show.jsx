@@ -15,7 +15,7 @@ class MovieShow extends React.Component {
         }
         return(
             <div className='show-container'>
-                <video width='500' height='500' controls className='show-movie'>
+                <video width='500' height='500' controls autoPlay className='show-movie'>
                     <source src={this.props.movie.videoUrl} type='video/mp4'/>
                 </video> 
                 <Link to='/movies' className='show-pg-index-link'>

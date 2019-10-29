@@ -37,6 +37,12 @@ class MovieItem extends React.Component {
             this.props.setPopout(2)
         } else if (this.props.movie.genre === 'Horror') {
             this.props.setPopout(3)
+        } else if (this.props.movie.genre === 'Fantasy') {
+            this.props.setPopout(4)
+        } else if (this.props.movie.genre === 'Animation') {
+            this.props.setPopout(5)
+        } else if (this.props.movie.genre === 'Anime') {
+            this.props.setPopout(6)
         }
     }
  
