@@ -32,10 +32,10 @@ class Search extends React.Component {
         return(
             <div>
                 <form action="" onSubmit={this.handleSubmit} className='search-bar-container'>
-                    <input type="text" className='search-bar-input' placeholder='Title, genre...' onChange={this.update('query')} value={this.state.query} />
                     <button className='search-icon'>
                         <FontAwesomeIcon icon={faSearch} className='search-icon'/>
                     </button>
+                    <input type="text" className='search-bar-input' placeholder='Title, genre...' onChange={this.update('query')} value={this.state.query} />
                 </form>
             </div>
         )

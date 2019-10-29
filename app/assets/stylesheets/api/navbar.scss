@@ -11,23 +11,35 @@
         justify-content: flex-end;
 
         h1 {
-            width: 30vw;
+            width: 27vw;
             font-size: 130%;
             // margin-bottom: 0%;
             margin-top: 1%;
-            margin-left: 5%;
+            margin-left: 3%;
             
             
         }
         .nav-bar-mylist {
             color: white;
-            margin-right: 2%;
-            margin-left: 2%;
+            margin-right: 4%;
+            margin-left: 1%;
             text-decoration: none;
             font-size: 120%;
         }
         
         .nav-bar-mylist:hover {
+            color: rgb(155, 155, 155);
+        }
+
+        .nav-bar-movies {
+            color: white;
+            margin-right: 1%;
+            margin-left: 1%;
+            text-decoration: none;
+            font-size: 120%;
+        }
+        
+        .nav-bar-movies:hover {
             color: rgb(155, 155, 155);
         }
 
@@ -37,8 +49,8 @@
         
         .nav-bar-linkedin {
             color: white;
-            margin-right: 3%;
-            margin-left: 3%;
+            margin-right: 2%;
+            margin-left: 2%;
             text-decoration: none;
             font-size: 120%;
         }
@@ -49,8 +61,8 @@
 
         .nav-bar-github {
             color: white;
-            margin-right: 3%;
-            margin-left: 3%;
+            margin-right: 2%;
+            margin-left: 2%;
             text-decoration: none;
             font-size: 120%;
         }
@@ -87,15 +99,26 @@
 
         .search-bar-container {
             display: flex;
-            margin-left: 3%;
-            margin-right: 3%;
+            // margin-right: 3%;
+            border: 1px solid white;
+            border-radius: 2px;
+            
             .search-bar-input {
                 height: 20px;
                 border-width: 0px;
+                background-color: black;
+                color: white;
+                
+                &:focus {
+                    outline-width: 0;
+                }
             }
             
             .search-icon {
-                border-color: white;
+                // border-color: white;
+                border: none;
+                color: white;
+                background-color: black;
             }
         }
     }

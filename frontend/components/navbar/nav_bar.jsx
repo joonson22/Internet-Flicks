@@ -28,7 +28,7 @@ class NavBar extends React.Component {
                             <a href="https://github.com/joonson22" className='nav-anchors'>
                                 <FontAwesomeIcon icon={faGithub} className='nav-bar-github'/>
                             </a>
-                            <Link to='/movies' className='nav-bar-mylist'>Movies</Link>
+                            <Link to='/movies' className='nav-bar-movies'>Movies</Link>
                             <Link to='/mylist' className='nav-bar-mylist'>Mylist</Link>
                             <SearchContainer />
                             <h1>Welcome {this.props.user.username}</h1>
