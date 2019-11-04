@@ -103,8 +103,8 @@ class MovieItemPopout extends React.Component {
                         </Link> */}
                     </div>
                     <div className='popout-right'>
-                        <video autoPlay='autoPlay' className='popout-video'>
-                            <source src={this.props.movie.videoUrl} type='video/mp4' />
+                        <video autoPlay='autoPlay' src={this.props.movie.videoUrl} type='video/mp4' className='popout-video'>
+                            {/* <source src={this.props.movie.videoUrl} type='video/mp4' /> */}
                         </video>
                         <button onClick={this.props.closePopout} className='popout-close'>
                             <FontAwesomeIcon icon={faTimes} />
