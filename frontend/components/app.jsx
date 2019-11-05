@@ -25,7 +25,7 @@ const App = () => (
             <ProtectedRoute exact path='/mylist' component={MylistContainer} />
             <ProtectedRoute exact path='/movies/:movieId' component={MoviesContainer} />
             <ProtectedRoute exact path='/movie/:movieId' component={MovieShowContainer} />
-            <Route exact path="/" component={GreetingContainer} />
+            <AuthRoute exact path="/" component={GreetingContainer} />
             <Route component={Page} />
         </Switch>
     </div>
