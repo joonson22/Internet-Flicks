@@ -4,7 +4,7 @@ import { fetchMylist, deleteMylist } from '../../actions/mylist_actions';
 import Mylist from './mylist'
 
 const msp = state => {
-    // debugger
+   
     return({
         user: state.entities.users[state.session.id],
         mylists: Object.values(state.entities.mylist),

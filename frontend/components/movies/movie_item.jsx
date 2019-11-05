@@ -29,9 +29,9 @@ class MovieItem extends React.Component {
 
     handleClick() {
         this.props.openPopout();
-        // debugger
+ 
         if (this.props.movie.genre === 'Action') {
-            // debugger
+            
             this.props.setPopout(1)
         } else if (this.props.movie.genre === 'Comedy') {
             this.props.setPopout(2)

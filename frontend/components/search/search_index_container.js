@@ -7,7 +7,6 @@ import { createMylist, fetchMylist, deleteMylist } from '../../actions/mylist_ac
 
 
 const msp = state => {
-// debugger
     return({
         search: state.ui.search,
         movies: Object.values(state.entities.movies),

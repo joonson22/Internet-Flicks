@@ -30,7 +30,6 @@ class SearchIndex extends React.Component {
 
 
     render() {
-        // debugger
         if (this.props.movies.length === 0) {
             return null;
         }

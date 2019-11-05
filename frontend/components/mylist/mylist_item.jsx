@@ -19,10 +19,9 @@ class MylistItem extends React.Component {
     }
 
     handleDelete() {
-        // debugger
+        
         this.props.deleteMylist(this.props.mylistId)
             .then(() => {
-                // debugger
                 this.props.fetchMylist()
             })
         

@@ -17,7 +17,6 @@ class Mylist extends React.Component {
     
     
     render() {
-        // debugger
         // if (this.props.mylists.length === 0) {
         //     return null
         // }

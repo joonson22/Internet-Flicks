@@ -5,7 +5,6 @@ import { withRouter } from "react-router";
 import { updateSearch } from '../../actions/search_action';
 
 const msp = state => {
-    // debugger
     return({
         search: state.ui.search,
         
