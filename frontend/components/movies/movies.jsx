@@ -7,6 +7,8 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
+import Carousel from '../carousel/carousel';
+
 class Movies extends React.Component {
     constructor(props) {
         super(props);
@@ -88,11 +90,10 @@ class Movies extends React.Component {
                                     My List
                                 </button>
                             )}
-                        {/* <button className='index-mylist-btn'>
-                            <FontAwesomeIcon icon={faPlus} />
-                            My list
-                        </button> */}
                     </div>
+                </div>
+                <div>
+                    <Carousel />
                 </div>
                 <div className='genre-container'>
                     <div className='genre-title'>
