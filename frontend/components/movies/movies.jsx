@@ -92,9 +92,9 @@ class Movies extends React.Component {
                             )}
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <Carousel />
-                </div>
+                </div> */}
                 <div className='genre-container'>
                     <div className='genre-title'>
                         <h1>Action</h1>

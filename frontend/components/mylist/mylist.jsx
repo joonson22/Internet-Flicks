@@ -27,7 +27,6 @@ class Mylist extends React.Component {
         
         return(
             <div className='mylist-container'>
-
                 {this.props.mylists.length === 0 ? (
                     <h1 className='mylist-message'>No saved movies, add movies to watch later!</h1>
                 ) : (

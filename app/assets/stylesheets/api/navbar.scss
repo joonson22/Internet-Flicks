@@ -9,14 +9,13 @@
         align-items: center;
         color: white;
         justify-content: flex-end;
-
+       
         h1 {
             width: 27vw;
-            font-size: 130%;
-            // margin-bottom: 0%;
+            max-width: 350px;
+            font-size: 120%;
             margin-top: 1%;
-            margin-left: 3%;
-            
+            margin-left: 2%;
             
         }
         .nav-bar-mylist {
@@ -126,16 +125,17 @@
     .splash-login-link{
         background-color: #E50914;
         color: white;
-        padding: 0.6em;
+        padding: 0.5em;
       
-        padding-right: 0.8%;
+        // padding-right: 0.8%;
         text-decoration: none;
         border-radius: 15px;
-        //  height: 20px;
-        height: 3vh;
-        //  width: 50px;
-        width: 3.5vw;
-        //  margin-right: 50px;
+      
+        // height: 3vh;
+        // width: 3.5vw;
+        width: 3.5%;
+        height: 100%;
+        text-align: center;
         margin-right: 3.8%;
         box-shadow: 0 4px rgb(146, 1, 8);
          
