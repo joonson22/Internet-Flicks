@@ -21,13 +21,13 @@ class Carousel extends React.Component {
     
         carouselSlide.style.transition = 'transform 0.4s ease-in-out';
 
-        // carouselSlide.addEventListener('transitionend', () => {
-        //     if (carouselImages[this.state.counter].id === 'lastCLone') {
-        //         carouselSlide.style.transition = 'none';
-        //         this.setState({counter: carouselImages.length - 2})
-        //         carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-        //     }
-        // })
+        carouselSlide.addEventListener('transitionend', () => {
+            if (carouselImages[this.state.counter].id === 'lastCLone') {
+                carouselSlide.style.transition = 'none';
+                this.setState({counter: carouselImages.length - 2})
+                carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            }
+        })
         setTimeout(() => {
             if (this.state.counter < 0) {
                 carouselSlide.style.transform = 'translateX(' + (-size * this.state.counter) + 'px)';
