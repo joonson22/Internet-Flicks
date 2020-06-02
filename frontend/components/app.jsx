@@ -15,7 +15,6 @@ import { withRouter } from 'react-router'
 const NavWithRouter = withRouter(NavBarContainer);
 const App = () => (
     <div>
-
         <NavBarContainer />
         <Switch>
             <AuthRoute path='/login' component={LoginFormContainer} />

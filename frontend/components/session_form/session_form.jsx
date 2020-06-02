@@ -65,8 +65,6 @@ class SessionForm extends React.Component {
                 this.props.history.push('/movies')
             })  : this.setPassword(demopassword)
         }, 50)
-
-       
     }
 
     renderErrors(){
