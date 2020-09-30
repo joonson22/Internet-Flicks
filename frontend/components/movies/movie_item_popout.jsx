@@ -17,8 +17,10 @@ class MovieItemPopout extends React.Component {
         this.handleMute = this.handleMute.bind(this);
     }
     componentDidMount() {
-        this.props.fetchMovie(this.props.moviePopoutId)
-        this.props.fetchMylist();
+        if (this.props.moviePopoutId) {
+            this.props.fetchMovie(this.props.moviePopoutId)
+            this.props.fetchMylist();
+        }
     }
 
     handleMylist() {
