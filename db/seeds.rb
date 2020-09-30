@@ -120,8 +120,7 @@
         movie.video.attach(io: file, filename: "#{video1}.mp4")
         movie.photo.attach(io: file2, filename: "#{movie.title} Thumbnail.jpg")
     end
-
-
+f
     
     
     
